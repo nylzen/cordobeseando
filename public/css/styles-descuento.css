@@ -1,0 +1,82 @@
+@import "styles.css";
+
+.container-publicidad {
+  gap: 50px;
+  padding: 20px;
+  height: 90vh;
+}
+
+.publicidad-comercio {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1609525313344-a56b96f20718?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80")
+      no-repeat center/cover;
+  border-radius: 15px;
+  color: var(--light);
+}
+
+.title-comercio {
+  font-weight: 600;
+}
+
+.rrss-comercio {
+  list-style: none;
+  padding: 0;
+}
+
+.rrss-comercio li {
+  padding: 0 20px 0 0;
+  font-size: 20px;
+}
+
+.descuentos {
+  padding: 0;
+}
+
+.p-descuentos {
+  text-align: left;
+}
+
+.descuentos p {
+  font-weight: bold;
+}
+
+.sale-icon {
+  max-width: 100%;
+  width: 25px;
+}
+
+/* queries */
+@media screen and (max-width: 767px) {
+  .container-publicidad {
+    flex-direction: column;
+    text-align: center;
+    margin: 50px;
+  }
+
+  .publicidad-comercio {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .rrss-comercio li {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .descuentos {
+    margin: auto;
+  }
+
+  hr {
+    width: 50vw;
+    margin: 15px auto;
+  }
+
+  .p-descuentos {
+    margin: 10px 0;
+    text-align: center;
+  }
+}

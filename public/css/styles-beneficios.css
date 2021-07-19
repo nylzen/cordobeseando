@@ -1,0 +1,59 @@
+@import "styles.css";
+
+.search-input {
+  border: none;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: var(--light);
+  width: 0;
+  height: 50px;
+}
+
+.search .search-input {
+  padding: 20px;
+  width: 100%;
+  font-size: 19px;
+  font-weight: 300;
+  color: var(--dark);
+}
+
+.tags-container {
+  gap: 5px;
+}
+
+.tag-item {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--actionColor);
+  color: var(--light);
+  border: none;
+}
+
+.tag-item p {
+  padding: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 397px) {
+  input {
+    width: 500px;
+  }
+}
+
+/* ============================================= */
+/* ================= COMERCIOS ================= */
+/* ============================================= */
+
+.container-comercios {
+  gap: 20px;
+}
+
+.comercio-item {
+  width: 150px;
+  height: 150px;
+  background-color: gray;
+  border-radius: 15px;
+}

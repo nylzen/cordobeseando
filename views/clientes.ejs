@@ -1,0 +1,26 @@
+<%- include("template/cabecera", { tituloWeb: "Comercios"}) %>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (arrayClientes.length > 0) { %>
+        <% arrayClientes.forEach(cliente =>{ %>
+            <tr>
+                <th scope="row"><%= cliente.id %> </th>
+                <td><%= cliente.nombre %> </td>
+                <td><%= cliente.descripcion %> </td>
+                <td>@mdo</td>
+            </tr>
+        <% }) %> 
+      <% } %>
+    </tbody>
+  </table>
+</div>
