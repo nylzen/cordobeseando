@@ -1,6 +1,19 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+// Conexion a base de datos
+const mongoose = require('mongoose');
+const user = 'cordobeseando_admin'
+const password = '2CcFlfGtqC5G4shw'
+const dbname = 'cordobeseando'
+const uri = `mongodb+srv://${user}:${password}@cluster0.y1fki.mongodb.net/${dbname}?retryWrites=true&w=majority`
+
+mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => console.log('Base conectada'))
+.catch(e => console.log(e))
+
+
 
 //Motor de plantillas
 app.set("view engine", "ejs");
