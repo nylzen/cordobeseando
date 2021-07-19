@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+env = require('dotenv').config;
 const port = process.env.PORT || 3000;
 
 // Conexion a base de datos

@@ -1,12 +1,17 @@
 <%- include("template/cabecera", { tituloWeb: "Comercios"}) %>
 
 <div class="container">
-  <table class="table">
+ 
+  <table class="table mt-5">
     <thead>
       <tr>
-        <th scope="col">#</th>
+       <!-- <th scope="col">#ID</th> -->
         <th scope="col">Nombre</th>
-        <th scope="col">Descripcion</th>
+        <th scope="col">Rubro</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Facebook</th>
+        <th scope="col">Instagram</th>
+        <th scope="col">Web</th>
         <th scope="col">Accion</th>
       </tr>
     </thead>
@@ -14,9 +19,13 @@
       <% if (arrayClientes.length > 0) { %>
         <% arrayClientes.forEach(cliente =>{ %>
             <tr>
-                <th scope="row"><%= cliente.id %> </th>
+              <!-- <th scope="row"><%= cliente.id %> </th> -->
                 <td><%= cliente.nombre %> </td>
-                <td><%= cliente.descripcion %> </td>
+                <td><%= cliente.rubro %> </td>
+                <td><%= cliente.direccion %> </td>
+                <td><a href="<%= cliente.fb %> "><i class="fab fa-facebook"></i></a></td>
+                <td><a href="<%= cliente.ig %> "><i class="fab fa-instagram-square"></i></a></td>
+                <td><a href="<%= cliente.web %> "><i class="fas fa-link"></i></a></td>
                 <td>@mdo</td>
             </tr>
         <% }) %> 

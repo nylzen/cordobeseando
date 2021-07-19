@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+// Requiere el modelo Cliente para conectarse a la DB
 const Cliente = require('../models/cliente')
 
 
