@@ -3,11 +3,13 @@
 <div class="container">
   <h1 class="mt-3">Lista de clientes</h1>
   <hr />
-  <a href="/clientes/crear" class="btn btn-success my-4">Nuevo cliente</a>
+  <a href="/clientes/crear" class="btn btn-success my-4"
+    ><i class="fas fa-plus me-2"></i>Nuevo cliente</a
+  >
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#ID</th>
+        <!-- <th scope="col">#ID</th> -->
         <th scope="col">Nombre</th>
         <th scope="col">Rubro</th>
         <th scope="col">Direccion</th>
@@ -21,7 +23,6 @@
       <% if (arrayClientes.length > 0) { %> <% arrayClientes.forEach(cliente =>{
       %>
       <tr>
-        <th scope="row"><%= cliente.id %></th>
         <td><%= cliente.nombre %></td>
         <td><%= cliente.rubro %></td>
         <td><%= cliente.direccion %></td>
@@ -41,7 +42,9 @@
           ></a>
         </td>
         <td>
-          <a href="clientes/<%=cliente.id%>" class="btn btn-warning">Editar</a>
+          <a href="clientes/<%=cliente.id%>" class="btn btn-warning"
+            ><i class="fas fa-edit me-2"></i>Editar</a
+          >
         </td>
       </tr>
       <% }) %> <% } %>

@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
     await Cliente.create(body);
     res.redirect('/clientes');
   } catch (error) {}
-  console.log(error);
+  //console.log(error);
 });
 
 // Ver un unico cliente
@@ -46,6 +46,29 @@ router.get('/:id', async (req, res) => {
       error: true,
       mensaje: 'No se encontro el ID especificado',
     });
+  }
+});
+
+// Eliminar un cliente de la DB
+
+router.delete('/:id', async (req, res) => {
+  const id = req.params.id;
+  try {
+    const clienteDB = await Cliente.findByIdAndDelete({ _id: id });
+
+    if (clienteDB) {
+      res.json({
+        estado: true,
+        mensaje: 'eliminado',
+      });
+    } else {
+      res.json({
+        estado: false,
+        mensaje: 'No se pudo eliminar',
+      });
+    }
+  } catch (error) {
+    console.log(error);
   }
 });
 
