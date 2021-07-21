@@ -1,4 +1,4 @@
-@import "styles.css";
+@import 'styles.css';
 
 .search-input {
   border: none;
@@ -52,8 +52,8 @@
 }
 
 .comercio-item {
-  width: 150px;
-  height: 150px;
-  background-color: gray;
+  width: 250px;
+  height: 250px;
+  background: url('../img/rubros/belleza.jpg') no-repeat center/cover;
   border-radius: 15px;
 }
