@@ -11,4 +11,9 @@ router.get('/descuento', (req, res) => {
   res.render('descuento');
 });
 
+// Ruta Beneficios
+router.get('/beneficios', (req, res) => {
+  res.render('beneficios');
+});
+
 module.exports = router;

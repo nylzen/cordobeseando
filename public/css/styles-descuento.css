@@ -1,4 +1,4 @@
-@import "styles.css";
+@import 'styles.css';
 
 .container-publicidad {
   gap: 50px;
@@ -9,9 +9,7 @@
 .publicidad-comercio {
   width: 400px;
   height: 400px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("https://images.unsplash.com/photo-1609525313344-a56b96f20718?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80")
-      no-repeat center/cover;
+  background: url('/img/descuentos/estetica-desc.jpg') no-repeat center/cover;
   border-radius: 15px;
   color: var(--light);
 }
