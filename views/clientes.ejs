@@ -1,26 +1,53 @@
 <%- include("template/cabecera", { tituloWeb: "Comercios"}) %>
 
 <div class="container">
+  <h1 class="mt-3">Lista de clientes</h1>
+  <hr />
+  <a href="/clientes/crear" class="btn btn-success my-4"
+    ><i class="fas fa-plus me-2"></i>Nuevo cliente</a
+  >
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <!-- <th scope="col">#ID</th> -->
         <th scope="col">Nombre</th>
-        <th scope="col">Descripcion</th>
+        <th scope="col">Rubro</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Facebook</th>
+        <th scope="col">Instagram</th>
+        <th scope="col">Web</th>
         <th scope="col">Accion</th>
       </tr>
     </thead>
     <tbody>
-      <% if (arrayClientes.length > 0) { %>
-        <% arrayClientes.forEach(cliente =>{ %>
-            <tr>
-                <th scope="row"><%= cliente.id %> </th>
-                <td><%= cliente.nombre %> </td>
-                <td><%= cliente.descripcion %> </td>
-                <td>@mdo</td>
-            </tr>
-        <% }) %> 
-      <% } %>
+      <% if (arrayClientes.length > 0) { %> <% arrayClientes.forEach(cliente =>{
+      %>
+      <tr>
+        <td><%= cliente.nombre %></td>
+        <td><%= cliente.rubro %></td>
+        <td><%= cliente.direccion %></td>
+        <td>
+          <a href="<%= cliente.fb %>" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </td>
+        <td>
+          <a href="<%= cliente.ig %>" target="_blank"
+            ><i class="fab fa-instagram-square"></i
+          ></a>
+        </td>
+        <td>
+          <a href="<%= cliente.web %>" target="_blank"
+            ><i class="fas fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a href="clientes/<%=cliente.id%>" class="btn btn-warning"
+            ><i class="fas fa-edit me-2"></i>Editar</a
+          >
+        </td>
+      </tr>
+      <% }) %> <% } %>
     </tbody>
   </table>
 </div>

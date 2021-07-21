@@ -1,0 +1,87 @@
+<%- include("template/cabecera", { tituloWeb: "Detalle Cliente"}) %>
+<div class="container">
+  <h1 class="mt-3">Detalle cliente</h1>
+  <hr />
+  <a href="/clientes" class="btn btn-dark mb-3"
+    ><i class="fas fa-angle-left me-2"></i>Volver</a
+  >
+  <!-- Si hay error imprimi esto -->
+  <% if (error === true) { %>
+  <p><%= mensaje %></p>
+  <a href="/clientes" class="btn btn-dark">Volver atras</a>
+  <% } %>
+
+  <!-- Si no hay error imprimi esto -->
+  <% if (!error) { %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#ID</th> -->
+        <th scope="col">Nombre</th>
+        <th scope="col">Rubro</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Facebook</th>
+        <th scope="col">Instagram</th>
+        <th scope="col">Web</th>
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- <th scope="row"><%= cliente.id %></th> -->
+        <td><%= cliente.nombre %></td>
+        <td><%= cliente.rubro %></td>
+        <td><%= cliente.direccion %></td>
+        <td>
+          <a href="<%= cliente.fb %>" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </td>
+        <td>
+          <a href="<%= cliente.ig %>" target="_blank"
+            ><i class="fab fa-instagram-square"></i
+          ></a>
+        </td>
+        <td>
+          <a href="<%= cliente.web %>" target="_blank"
+            ><i class="fas fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <button
+            class="btn btn-danger btn-sm"
+            id="btnEliminar"
+            data-id="<%= cliente.id %>"
+          >
+            <i class="fas fa-trash-alt me-2"></i>
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <% } %>
+</div>
+
+<script>
+  const btnEliminar = document.querySelector('#btnEliminar');
+  btnEliminar.addEventListener('click', async () => {
+    const id = btnEliminar.dataset.id;
+
+    try {
+      const data = await fetch(`/clientes/${id}`, {
+        method: 'delete',
+      });
+      const res = await data.json();
+
+      if (res.estado) {
+        window.location.href = '/clientes';
+      } else {
+        consol.log(res);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  });
+</script>
