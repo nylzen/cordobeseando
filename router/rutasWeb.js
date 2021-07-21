@@ -16,4 +16,9 @@ router.get('/beneficios', (req, res) => {
   res.render('beneficios');
 });
 
+// Ruta Comercios
+router.get('/comercios', (req, res) => {
+  res.render('comercios');
+});
+
 module.exports = router;

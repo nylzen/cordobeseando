@@ -123,9 +123,6 @@ body {
 .card-item {
   height: 250px;
   width: 250px;
-  background: url('/img/descuentos/estetica-desc.jpg') no-repeat center/cover;
-  /* background: url('https://images.unsplash.com/photo-1609525313344-a56b96f20718?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')
-    no-repeat center/cover; */
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -137,6 +134,19 @@ body {
 .card-item:hover,
 .card-comercio-item:hover {
   transform: scale(1.05);
+}
+
+.estetica {
+  background: url('../img/descuentos/estetica-desc.jpg') no-repeat center/cover;
+}
+.bebes {
+  background: url('../img/rubros/bebes.jpg') no-repeat center/cover;
+}
+.heladeria {
+  background: url('../img/rubros/heladeria.jpg') no-repeat center/cover;
+}
+.automotor {
+  background: url('../img/rubros/automotor.jpg') no-repeat center/cover;
 }
 
 /* Input Descuento CTA */
@@ -162,10 +172,10 @@ body {
 }
 
 .card-comercio-item {
-  width: 170px;
-  height: 170px;
+  width: 180px;
+  height: 180px;
   border-radius: 15px;
-  background-color: #c4c4c4;
+  background: url('../img/rubros/belleza.jpg') no-repeat center/cover;
   transition: all 0.4s ease;
 }
 
