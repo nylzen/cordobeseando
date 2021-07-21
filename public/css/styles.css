@@ -5,14 +5,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /*   border: 1px solid black; */
 }
 
 /* Variables */
 :root {
   /* Colors */
-  --backgroundColor: #ebebeb;
+  /*--backgroundColorVIEJO: #ebebeb; */
+  --backgroundColor: #fff;
   --actionColor: #005aff;
   --primaryColor: #ffa500;
+
   --light: #fff;
   --dark: #474747;
   --fontFamily: 'Poppins', sans-serif;
@@ -129,6 +132,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
+  /* border: 2px dashed var(--dark); */
 }
 
 .card-item:hover,
@@ -147,6 +151,10 @@ body {
 }
 .automotor {
   background: url('../img/rubros/automotor.jpg') no-repeat center/cover;
+}
+
+.belleza {
+  background: url('../img/rubros/belleza.jpg') no-repeat center/cover;
 }
 
 /* Input Descuento CTA */
