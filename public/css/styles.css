@@ -123,7 +123,6 @@ body {
 .card-item {
   height: 250px;
   width: 250px;
-  background: url('/img/descuentos/estetica-desc.jpg') no-repeat center/cover;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -135,6 +134,19 @@ body {
 .card-item:hover,
 .card-comercio-item:hover {
   transform: scale(1.05);
+}
+
+.estetica {
+  background: url('../img/descuentos/estetica-desc.jpg') no-repeat center/cover;
+}
+.bebes {
+  background: url('../img/rubros/bebes.jpg') no-repeat center/cover;
+}
+.heladeria {
+  background: url('../img/rubros/heladeria.jpg') no-repeat center/cover;
+}
+.automotor {
+  background: url('../img/rubros/automotor.jpg') no-repeat center/cover;
 }
 
 /* Input Descuento CTA */
