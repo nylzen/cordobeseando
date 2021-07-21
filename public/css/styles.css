@@ -1,5 +1,5 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -15,7 +15,7 @@
   --primaryColor: #ffa500;
   --light: #fff;
   --dark: #474747;
-  --fontFamily: "Poppins", sans-serif;
+  --fontFamily: 'Poppins', sans-serif;
 }
 
 .container-fluid {
@@ -67,6 +67,15 @@ body {
 .nav-ul li a:hover {
   opacity: 0.5;
 }
+
+.nav-ul li ul {
+  display: none;
+}
+
+.nav-ul li:hover ul {
+  display: block;
+}
+
 /* Menu Responsive Styles */
 .hamburger {
   background-color: transparent;
@@ -82,9 +91,9 @@ body {
 }
 
 /* Slider */
-.carousel-inner {
+/* .carousel-inner {
   height: 345px;
-}
+} */
 /* Section Descuentos */
 .descuentos {
   padding: 20px;
@@ -114,8 +123,9 @@ body {
 .card-item {
   height: 250px;
   width: 250px;
-  background: url("https://images.unsplash.com/photo-1609525313344-a56b96f20718?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80")
-    no-repeat center/cover;
+  background: url('/img/descuentos/estetica-desc.jpg') no-repeat center/cover;
+  /* background: url('https://images.unsplash.com/photo-1609525313344-a56b96f20718?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')
+    no-repeat center/cover; */
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -164,7 +174,7 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 15px;
-  background: url("https://images.unsplash.com/photo-1593697821094-53ed19153f21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")
+  background: url('https://images.unsplash.com/photo-1593697821094-53ed19153f21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')
     no-repeat center/cover;
 }
 
@@ -175,7 +185,7 @@ body {
 /* Escuchanos */
 .escuchanos {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80")
+    url('https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80')
       no-repeat center/cover;
   padding: 40px;
   color: var(--light);
