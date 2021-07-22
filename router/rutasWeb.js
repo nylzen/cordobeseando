@@ -6,10 +6,10 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
-/* // Ruta Descuento
+// Ruta Descuento
 router.get('/descuento', (req, res) => {
   res.render('descuento');
-}); */
+});
 
 // Ruta Beneficios
 router.get('/beneficios', (req, res) => {

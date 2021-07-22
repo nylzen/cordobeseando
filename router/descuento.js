@@ -16,9 +16,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Ver un unico cliente
+/* router.get('descuento/:id', async (req, res) => {
+  const id = req.params.id;
+  try {
+    const clienteDB = await Cliente.findOne({ _id: id });
+
+    res.render('detalle', {
+      cliente: clienteDB,
+      error: false,
+    });
+  } catch (error) {
+    res.render('detalle', {
+      error: true,
+      mensaje: 'No se encontro el ID especificado',
+    });
+  }
+}); */
+
 /* router.get('/', (req, res) => {
   res.render('descuento', {
-    arrayDescuento: [{ id: 'asd', nombre: '123' }],
+    arrayClientes: [{ id: 'asd', nombre: '123' }],
   });
 }); */
 module.exports = router;

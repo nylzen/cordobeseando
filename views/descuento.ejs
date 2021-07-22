@@ -1,11 +1,6 @@
 <%- include("template/cabecera", { tituloWeb: "Descuento"}) %>
 
 <div class="container-fluid">
-  <% if (arrayClientes > 0) { %> <% arrayClientes.forEach(cliente => { %>
-  <div class="bg-primary">
-    <h1><%= cliente.rubro %></h1>
-  </div>
-  <% }) %> <% } %>
   <div class="w-25 my-2 d-flex justify-content-center"></div>
   <div class="d-flex justify-content-center align-items-center">
     <div
@@ -32,7 +27,8 @@
       </div>
       <div class="comercio-info">
         <h2 class="title-comercio mb-3">Estetica Freya</h2>
-        <p>Saenz Peña 920 - Zarate</p>
+        <p>Saenz peña 920 - Zarate</p>
+
         <ul class="d-flex rrss-comercio">
           <li>
             <a href="#"><i class="fas fa-link"></i></a>
@@ -45,15 +41,13 @@
           </li>
         </ul>
         <hr />
-        <div class="descuentos d-flex flex-column">
-          <p class="p-descuentos">
-            <img
-              src="../img/sale.png"
-              alt="etiqueta-descuento"
-              class="sale-icon"
-            />
-            10% Tratamientos faciales
-          </p>
+        <div class="descuentos d-flex align-items-start">
+          <img
+            src="../img/sale.png"
+            alt="etiqueta-descuento"
+            class="sale-icon"
+          />
+          <p class="p-descuentos">10% Tratamientos faciales</p>
         </div>
         <hr />
         <div class="suscribirse">
