@@ -11,13 +11,12 @@
 /* Variables */
 :root {
   /* Colors */
-  /*--backgroundColorVIEJO: #ebebeb; */
   --backgroundColor: #fff;
   --actionColor: #005aff;
   --primaryColor: #ffa500;
-
   --light: #fff;
   --dark: #474747;
+  /* Font */
   --fontFamily: 'Poppins', sans-serif;
 }
 

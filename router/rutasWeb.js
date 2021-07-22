@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Ruta Raiz
 router.get('/', (req, res) => {
-  res.render('index', { titulo: 'mi titulo dinamico' });
+  res.render('index');
 });
 
 // Ruta Descuento
