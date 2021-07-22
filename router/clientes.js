@@ -93,4 +93,21 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// Ver un unico cliente para DESCUENTO
+router.get('/:id', async (req, res) => {
+  const id = req.params.id;
+  try {
+    const clienteDB = await Cliente.findOne({ _id: id });
+
+    res.render('descuento', {
+      cliente: clienteDB,
+      error: false,
+    });
+  } catch (error) {
+    res.render('descuento', {
+      error: true,
+      mensaje: 'No se encontro el ID especificado',
+    });
+  }
+});
 module.exports = router;

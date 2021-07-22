@@ -27,6 +27,7 @@ app.use(express.static(__dirname + '/public'));
 // Configuracion de las rutas de la web
 app.use('/', require('./router/rutasWeb'));
 app.use('/clientes', require('./router/clientes'));
+app.use('/descuento', require('./router/descuento'));
 
 //Configuracion 404
 app.use((req, res, next) => {

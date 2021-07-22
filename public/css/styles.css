@@ -139,6 +139,9 @@ body {
   transform: scale(1.05);
 }
 
+/* ==================================================== */
+/* ====================== RUBROS ====================== */
+/* ==================================================== */
 .estetica {
   background: url('../img/descuentos/estetica-desc.jpg') no-repeat center/cover;
 }
@@ -151,9 +154,11 @@ body {
 .automotor {
   background: url('../img/rubros/automotor.jpg') no-repeat center/cover;
 }
-
 .belleza {
   background: url('../img/rubros/belleza.jpg') no-repeat center/cover;
+}
+.traslados {
+  background: url('../img/rubros/traslados.jpg') no-repeat center/cover;
 }
 
 /* Input Descuento CTA */
