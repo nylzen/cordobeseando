@@ -9,9 +9,25 @@
 .publicidad-comercio {
   width: 400px;
   height: 400px;
-  background: url('/img/descuentos/estetica-desc.jpg') no-repeat center/cover;
+  background: url('/img/descuentos/banner-suplementos.jpg') no-repeat
+    center/cover;
   border-radius: 15px;
   color: var(--light);
+}
+
+.dto-badge {
+  background: black;
+  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+}
+
+.dto-badge p {
+  font-size: 50px;
+}
+
+.container-publi-info {
+  gap: 50px;
 }
 
 .title-comercio {
@@ -28,16 +44,18 @@
   font-size: 20px;
 }
 
-.descuentos {
+.descuento-info {
   padding: 0;
 }
 
 .p-descuentos {
   text-align: left;
+  margin-bottom: 0;
 }
 
 .descuentos p {
   font-weight: bold;
+  background: red;
 }
 
 .sale-icon {

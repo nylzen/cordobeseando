@@ -1,7 +1,6 @@
 <%- include("template/cabecera", { tituloWeb: "Descuento"}) %>
 
 <div class="container-fluid">
-  <div class="w-25 my-2 d-flex justify-content-center"></div>
   <div class="d-flex justify-content-center align-items-center">
     <div
       class="
@@ -12,48 +11,54 @@
       "
     >
       <div>
-        <a href="/beneficios" class="btn btn-dark"
+        <a href="/beneficios" class="btn btn-dark mb-5"
           ><i class="fas fa-angle-left me-2"></i>Volver</a
         >
-        <div
-          class="
-            publicidad-comercio
-            box-shadow
-            d-flex
-            justify-content-center
-            align-items-center
-          "
-        ></div>
-      </div>
-      <div class="comercio-info">
-        <h2 class="title-comercio mb-3"><%= cliente.nombre %></h2>
+        <div class="container-publi-info d-flex">
+          <div class="publicidad-comercio box-shadow d-flex">
+            <p
+              class="
+                dto-badge
+                m-3
+                d-flex
+                justify-content-center
+                align-items-center
+              "
+            >
+              15%
+            </p>
+          </div>
 
-        <p><%= cliente.direccion %></p>
-
-        <ul class="d-flex rrss-comercio">
-          <li>
-            <a href="#"><i class="fas fa-link"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-          </li>
-        </ul>
-        <hr />
-        <div class="descuentos d-flex align-items-start">
-          <img
-            src="../img/sale.png"
-            alt="etiqueta-descuento"
-            class="sale-icon"
-          />
-          <p class="p-descuentos"><%= cliente.descuento %></p>
-        </div>
-        <hr />
-        <div class="suscribirse">
-          <p>Unite al club de descuento y disfruta de estos beneficios</p>
-          <button class="btn btn-primary">Suscribite | $150 por mes</button>
+          <div class="comercio-info">
+            <h2 class="title-comercio mb-3"><%= cliente.nombre %></h2>
+            <p><%= cliente.direccion %></p>
+            <p>Telefono</p>
+            <ul class="d-flex rrss-comercio">
+              <li>
+                <a href="#"><i class="fas fa-link"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+            </ul>
+            <hr />
+            <div class="descuento-info d-flex align-items-center">
+              <img
+                src="../img/sale.png"
+                alt="etiqueta-descuento"
+                class="sale-icon me-2"
+              />
+              <p class="p-descuentos"><%= cliente.descuento %></p>
+            </div>
+            <hr />
+            <div class="suscribirse">
+              <p>Unite al club de descuento y disfruta de estos beneficios</p>
+              <button class="btn btn-primary">Suscribite | $150 por mes</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

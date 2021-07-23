@@ -1,26 +1,95 @@
 /* ==================================================== */
 /* ====================== RUBROS ====================== */
 /* ==================================================== */
-
-.estetica {
-  background: url('../img/descuentos/estetica-desc.jpg') no-repeat center/cover;
+.animales {
+  background: url('../img/rubros/animales-mascotas.jpg') no-repeat center/cover;
 }
-.bebes {
-  background: url('../img/rubros/bebes.jpg') no-repeat center/cover;
-}
-.heladeria {
-  background: url('../img/rubros/heladeria.jpg') no-repeat center/cover;
+.arte {
+  background: url('../img/rubros/arte.jpg') no-repeat center/cover;
 }
 .automotor {
   background: url('../img/rubros/automotor.jpg') no-repeat center/cover;
 }
+.bebes {
+  background: url('../img/rubros/bebes.jpg') no-repeat center/cover;
+}
 .belleza {
   background: url('../img/rubros/belleza.jpg') no-repeat center/cover;
+}
+.caza {
+  background: url('../img/rubros/caza-pesca.jpg') no-repeat center/cover;
+}
+.comida {
+  background: url('../img/rubros/comida.jpg') no-repeat center/cover;
+}
+.deporte {
+  background: url('../img/rubros/deporte.jpg') no-repeat center/cover;
+}
+.electronica {
+  background: url('../img/rubros/electronica.jpg') no-repeat center/cover;
+}
+.ferreteria {
+  background: url('../img/rubros/ferreteria-cerrajería.jpg') no-repeat
+    center/cover;
+}
+.heladeria {
+  background: url('../img/rubros/heladeria.jpg') no-repeat center/cover;
+}
+.hogar {
+  background: url('../img/rubros/hogar.jpg') no-repeat center/cover;
+}
+.indumentaria {
+  background: url('../img/rubros/indumentaria.jpg') no-repeat center/cover;
+}
+.inmobiliaria {
+  background: url('../img/rubros/inmobiliaria.jpg') no-repeat center/cover;
+}
+.joyas {
+  background: url('../img/rubros/joyas.jpg') no-repeat center/cover;
+}
+.kiosco {
+  background: url('../img/rubros/kiosco.jpg') no-repeat center/cover;
+}
+.libreria {
+  background: url('../img/rubros/librerias.jpg') no-repeat center/cover;
+}
+.naturaleza {
+  background: url('../img/rubros/naturaleza.jpg') no-repeat center/cover;
+}
+.oficios {
+  background: url('../img/rubros/oficios.jpg') no-repeat center/cover;
+}
+.profesiones {
+  background: url('../img/rubros/profesiones.jpg') no-repeat center/cover;
+}
+.repuestos {
+  background: url('../img/rubros/repuestos-y-accesorios.jpg') no-repeat
+    center/cover;
+}
+.rodados {
+  background: url('../img/rubros/rodados.jpg') no-repeat center/cover;
+}
+.salud {
+  background: url('../img/rubros/salud.jpg') no-repeat center/cover;
+}
+.seguros {
+  background: url('../img/rubros/seguros.jpg') no-repeat center/cover;
+}
+.souvenir {
+  background: url('../img/rubros/souvenir-cotillon.jpg') no-repeat center/cover;
+}
+.supermercado {
+  background: url('../img/rubros/supermercado.jpg') no-repeat center/cover;
+}
+.tatuajes {
+  background: url('../img/rubros/tatuajes.jpg') no-repeat center/cover;
 }
 .traslados {
   background: url('../img/rubros/traslados.jpg') no-repeat center/cover;
 }
-
+.videojuegos {
+  background: url('../img/rubros/videojuegos.jpg') no-repeat center/cover;
+}
 /* ==================================================== */
 /* ====================== RUBROS ====================== */
 /* ==================================================== */
