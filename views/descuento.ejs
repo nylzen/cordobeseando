@@ -26,7 +26,13 @@
         ></div>
       </div>
       <div class="comercio-info">
+        <!-- <h2 class="title-comercio mb-3">Estetica Freya</h2> -->
+        <% if (arrayClientes.length > 0) { %> <% arrayClientes.forEach(cliente=>
+        { %>
+        <h2><%= cliente.rubro %></h2>
+        <% }) %> <% } %>
         <h2 class="title-comercio mb-3">Estetica Freya</h2>
+
         <p>Saenz peña 920 - Zarate</p>
 
         <ul class="d-flex rrss-comercio">
