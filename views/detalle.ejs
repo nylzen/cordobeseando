@@ -18,6 +18,7 @@
       class="form-control my-2"
       name="nombre"
       id="nombreInput"
+      placeholder="Nombre del Cliente"
       value="<%= cliente.nombre %>"
     />
     <input
@@ -25,6 +26,7 @@
       class="form-control my-2"
       name="rubro"
       id="rubroInput"
+      placeholder="Rubro/Categoria"
       value="<%= cliente.rubro %>"
     />
     <input
@@ -32,6 +34,7 @@
       class="form-control my-2"
       name="direccion"
       id="direccionInput"
+      placeholder="Direccion del cliente"
       value="<%= cliente.direccion %>"
     />
     <input
@@ -39,6 +42,7 @@
       class="form-control my-2"
       name="descuento"
       id="descuentoInput"
+      placeholder="Descuento"
       value="<%= cliente.descuento %>"
     />
     <input
@@ -46,6 +50,7 @@
       class="form-control my-2"
       name="fb"
       id="fbInput"
+      placeholder="Facebook"
       value="<%= cliente.fb %>"
     />
     <input
@@ -53,6 +58,7 @@
       class="form-control my-2"
       name="ig"
       id="igInput"
+      placeholder="Instagram"
       value="<%= cliente.ig %>"
     />
     <input
@@ -60,9 +66,24 @@
       class="form-control my-2"
       name="web"
       id="webInput"
+      placeholder="Web"
       value="<%= cliente.web %>"
     />
-    <button class="btn btn-warning" type="submit">Editar</button>
+    <div class="upload-file d-flex flex-column mb-3">
+      <label
+        class="custom-file-label"
+        for="inputGroupFile02"
+        aria-describedby="inputGroupFileAddon02"
+        >Cargar Banner Descuento</label
+      >
+      <input
+        type="file"
+        name="image"
+        class="custom-file-input"
+        id="inputGroupFile02"
+      />
+    </div>
+    <button class="btn btn-warning w-100" type="submit">Editar</button>
   </form>
   <hr />
   <button
@@ -78,43 +99,42 @@
 </div>
 
 <script>
-  const btnEliminar = document.querySelector("#btnEliminar");
-  btnEliminar.addEventListener("click", async () => {
+  const btnEliminar = document.querySelector('#btnEliminar');
+  btnEliminar.addEventListener('click', async () => {
     const id = btnEliminar.dataset.id;
 
     try {
       const data = await fetch(`/clientes/${id}`, {
-        method: "delete",
+        method: 'delete',
       });
       const res = await data.json();
 
       if (res.estado) {
-        window.location.href = "/clientes";
+        window.location.href = '/clientes';
       } else {
-        //consol.log(res);
       }
     } catch (error) {
       console.log(error);
     }
   });
 
-  const formEditar = document.querySelector("#formEditar");
+  const formEditar = document.querySelector('#formEditar');
 
-  formEditar.addEventListener("submit", async (e) => {
+  formEditar.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const nombre = document.querySelector("#nombreInput").value;
-    const rubro = document.querySelector("#rubroInput").value;
-    const direccion = document.querySelector("#direccionInput").value;
-    const descuento = document.querySelector("#descuentoInput").value;
-    const fb = document.querySelector("#fbInput").value;
-    const ig = document.querySelector("#igInput").value;
-    const web = document.querySelector("#webInput").value;
+    const nombre = document.querySelector('#nombreInput').value;
+    const rubro = document.querySelector('#rubroInput').value;
+    const direccion = document.querySelector('#direccionInput').value;
+    const descuento = document.querySelector('#descuentoInput').value;
+    const fb = document.querySelector('#fbInput').value;
+    const ig = document.querySelector('#igInput').value;
+    const web = document.querySelector('#webInput').value;
     const id = formEditar.dataset.id;
     try {
       const data = await fetch(`/clientes/${id}`, {
-        method: "put",
-        headers: { "Content-Type": "application/json" },
+        method: 'put',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           nombre,
           rubro,
@@ -128,9 +148,9 @@
 
       const res = await data.json();
       if (res.estado) {
-        window.location.href = "/clientes";
+        window.location.href = '/clientes';
       } else {
-        alert("Hubo un error al editar, por favor intenta nuevamente");
+        alert('Hubo un error al editar, por favor intenta nuevamente');
       }
     } catch (error) {
       console.loc(error);

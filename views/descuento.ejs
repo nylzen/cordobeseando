@@ -15,24 +15,24 @@
           ><i class="fas fa-angle-left me-2"></i>Volver</a
         >
         <div class="container-publi-info d-flex">
-          <div
-            class="
-              publicidad-comercio
-              box-shadow
-              d-flex
-              justify-content-center
-              align-items-center
-              <%=
-              cliente.rubro
-              %>
-            "
-          ></div>
+          <div class="publicidad-comercio box-shadow d-flex">
+            <p
+              class="
+                dto-badge
+                m-3
+                d-flex
+                justify-content-center
+                align-items-center
+              "
+            >
+              15%
+            </p>
+          </div>
 
           <div class="comercio-info">
             <h2 class="title-comercio mb-3"><%= cliente.nombre %></h2>
-
             <p><%= cliente.direccion %></p>
-
+            <p>Telefono</p>
             <ul class="d-flex rrss-comercio">
               <li>
                 <a href="#"><i class="fas fa-link"></i></a>
@@ -45,11 +45,11 @@
               </li>
             </ul>
             <hr />
-            <div class="descuentos d-flex align-items-start">
+            <div class="descuento-info d-flex align-items-center">
               <img
                 src="../img/sale.png"
                 alt="etiqueta-descuento"
-                class="sale-icon"
+                class="sale-icon me-2"
               />
               <p class="p-descuentos"><%= cliente.descuento %></p>
             </div>
