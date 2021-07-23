@@ -50,7 +50,6 @@ router.get('/:id', async (req, res) => {
 });
 
 // Eliminar un cliente de la DB
-
 router.delete('/:id', async (req, res) => {
   const id = req.params.id;
   try {
@@ -72,4 +71,43 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  const id = req.params.id;
+  const body = req.body;
+  try {
+    const clientesDB = await Cliente.findByIdAndUpdate(id, body, {
+      useFindAndModify: false,
+    });
+    console.log(clientesDB);
+
+    res.json({
+      estado: true,
+      mensaje: 'editado',
+    });
+  } catch (error) {
+    console.log(error);
+    res.json({
+      estado: false,
+      mensaje: 'Fallo al editar',
+    });
+  }
+});
+
+// Ver un unico cliente para DESCUENTO
+router.get('/:id', async (req, res) => {
+  const id = req.params.id;
+  try {
+    const clienteDB = await Cliente.findOne({ _id: id });
+
+    res.render('descuento', {
+      cliente: clienteDB,
+      error: false,
+    });
+  } catch (error) {
+    res.render('descuento', {
+      error: true,
+      mensaje: 'No se encontro el ID especificado',
+    });
+  }
+});
 module.exports = router;

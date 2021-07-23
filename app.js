@@ -1,21 +1,24 @@
 const express = require("express");
-const bodyParser = require('body-parser')
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.urlencoded({extended: true}));
-app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Configuracion las variables de entorno
-env = require('dotenv').config();
+env = require("dotenv").config();
 
 // Conexion a base de datos
-const mongoose = require('mongoose');
-const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.y1fki.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`
+const user = "nel";
+const pw = "1pJ66SCSiq7jWXtB";
+const dbname = "cordobeseando";
+const mongoose = require("mongoose");
+const uri = `mongodb+srv://${user}:${pw}@cluster0.y1fki.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
-.then(() => console.log('Base conectada'))
-.catch(e => console.log(e));
+mongoose
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("Base conectada"))
+  .catch((e) => console.log(e));
 
 //Motor de plantillas
 app.set("view engine", "ejs");
@@ -27,6 +30,8 @@ app.use(express.static(__dirname + "/public"));
 // Configuracion de las rutas de la web
 app.use("/", require("./router/rutasWeb"));
 app.use("/clientes", require("./router/clientes"));
+app.use("/descuento", require("./router/descuento"));
+app.use("/beneficios", require("./router/beneficios"));
 
 //Configuracion 404
 app.use((req, res, next) => {
