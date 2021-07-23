@@ -7,14 +7,14 @@ router.get("/", (req, res) => {
 });
 
 // Ruta Descuento
-/* router.get('/descuento', (req, res) => {
-  res.render('descuento');
+/* router.get("/descuento", (req, res) => {
+  res.render("descuento");
 }); */
 
 // Ruta Beneficios
-router.get("/beneficios", (req, res) => {
+/* router.get("/beneficios", (req, res) => {
   res.render("beneficios");
-});
+}); */
 
 // Ruta Comercios
 router.get("/comercios", (req, res) => {

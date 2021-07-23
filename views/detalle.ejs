@@ -78,43 +78,43 @@
 </div>
 
 <script>
-  const btnEliminar = document.querySelector('#btnEliminar');
-  btnEliminar.addEventListener('click', async () => {
+  const btnEliminar = document.querySelector("#btnEliminar");
+  btnEliminar.addEventListener("click", async () => {
     const id = btnEliminar.dataset.id;
 
     try {
       const data = await fetch(`/clientes/${id}`, {
-        method: 'delete',
+        method: "delete",
       });
       const res = await data.json();
 
       if (res.estado) {
-        window.location.href = '/clientes';
+        window.location.href = "/clientes";
       } else {
-        consol.log(res);
+        //consol.log(res);
       }
     } catch (error) {
       console.log(error);
     }
   });
 
-  const formEditar = document.querySelector('#formEditar');
+  const formEditar = document.querySelector("#formEditar");
 
-  formEditar.addEventListener('submit', async (e) => {
+  formEditar.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const nombre = document.querySelector('#nombreInput').value;
-    const rubro = document.querySelector('#rubroInput').value;
-    const direccion = document.querySelector('#direccionInput').value;
-    const descuento = document.querySelector('#descuentoInput').value;
-    const fb = document.querySelector('#fbInput').value;
-    const ig = document.querySelector('#igInput').value;
-    const web = document.querySelector('#webInput').value;
+    const nombre = document.querySelector("#nombreInput").value;
+    const rubro = document.querySelector("#rubroInput").value;
+    const direccion = document.querySelector("#direccionInput").value;
+    const descuento = document.querySelector("#descuentoInput").value;
+    const fb = document.querySelector("#fbInput").value;
+    const ig = document.querySelector("#igInput").value;
+    const web = document.querySelector("#webInput").value;
     const id = formEditar.dataset.id;
     try {
       const data = await fetch(`/clientes/${id}`, {
-        method: 'put',
-        headers: { 'Content-Type': 'application/json' },
+        method: "put",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           nombre,
           rubro,
@@ -128,9 +128,9 @@
 
       const res = await data.json();
       if (res.estado) {
-        window.location.href = '/clientes';
+        window.location.href = "/clientes";
       } else {
-        alert('Hubo un error al editar, por favor intenta nuevamente');
+        alert("Hubo un error al editar, por favor intenta nuevamente");
       }
     } catch (error) {
       console.loc(error);

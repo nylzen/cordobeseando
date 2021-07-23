@@ -26,14 +26,9 @@
         ></div>
       </div>
       <div class="comercio-info">
-        <!-- <h2 class="title-comercio mb-3">Estetica Freya</h2> -->
-        <% if (arrayClientes.length > 0) { %> <% arrayClientes.forEach(cliente=>
-        { %>
-        <h2><%= cliente.rubro %></h2>
-        <% }) %> <% } %>
-        <h2 class="title-comercio mb-3">Estetica Freya</h2>
+        <h2 class="title-comercio mb-3"><%= cliente.nombre %></h2>
 
-        <p>Saenz peña 920 - Zarate</p>
+        <p><%= cliente.direccion %></p>
 
         <ul class="d-flex rrss-comercio">
           <li>
@@ -53,7 +48,7 @@
             alt="etiqueta-descuento"
             class="sale-icon"
           />
-          <p class="p-descuentos">10% Tratamientos faciales</p>
+          <p class="p-descuentos"><%= cliente.descuento %></p>
         </div>
         <hr />
         <div class="suscribirse">

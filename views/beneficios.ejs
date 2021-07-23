@@ -20,57 +20,14 @@
   <span class="p-2 tag-item">Peluqueria</span>
 </div>
 
-<!-- Container descuentos -->
 <div class="descuentos-container">
-  <div class="cards-descuentos mx-auto px-5 mb-5 d-flex flex-wrap">
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow belleza"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
-    <!--  -->
-    <a href="/descuento" class="card-item box-shadow automotor"> </a>
-    <a href="/descuento" class="card-item box-shadow heladeria"> </a>
-    <a href="/descuento" class="card-item box-shadow traslados"> </a>
-    <a href="/descuento" class="card-item box-shadow bebes"> </a>
+  <div class="cards-descuentos mx-auto px-5 mb-5 d-flex">
+    <% arrayClientes.forEach(cliente=> { %>
+    <a
+      href="/descuento/<%= cliente.id %>"
+      class="card-item box-shadow <%= cliente.rubro %>"
+    ></a>
+
+    <% }) %>
   </div>
 </div>
