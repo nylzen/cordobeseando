@@ -78,7 +78,7 @@ router.put('/:id', async (req, res) => {
     const clientesDB = await Cliente.findByIdAndUpdate(id, body, {
       useFindAndModify: false,
     });
-    console.log(clientesDB);
+    //console.log(clientesDB);
 
     res.json({
       estado: true,

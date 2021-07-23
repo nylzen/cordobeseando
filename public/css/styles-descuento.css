@@ -14,6 +14,10 @@
   color: var(--light);
 }
 
+.container-publi-info {
+  gap: 50px;
+}
+
 .title-comercio {
   font-weight: 600;
 }

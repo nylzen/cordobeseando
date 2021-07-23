@@ -14,14 +14,12 @@
 </div>
 
 <div class="tags-container mt-5 d-flex justify-content-center">
-  <span class="p-2 tag-item active">Peluqueria</span>
-  <span class="p-2 tag-item">Peluqueria</span>
-  <span class="p-2 tag-item">Peluqueria</span>
-  <span class="p-2 tag-item">Peluqueria</span>
+  <span class="p-2 tag-item active">Zárate</span>
+  <span class="p-2 tag-item">Campana</span>
 </div>
 
 <div class="descuentos-container">
-  <div class="cards-descuentos mx-auto px-5 mb-5 d-flex">
+  <div class="cards-descuentos mx-auto px-5 mb-5 d-flex flex-wrap">
     <% arrayClientes.forEach(cliente=> { %>
     <a
       href="/descuento/<%= cliente.id %>"
