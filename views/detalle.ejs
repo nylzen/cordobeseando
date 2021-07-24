@@ -85,7 +85,15 @@
       placeholder="Web"
       value="<%= cliente.web %>"
     />
-    <div class="upload-file d-flex flex-column mb-3">
+    <input
+      type="text"
+      class="form-control my-2"
+      name="imgURL"
+      id="imgURLInput"
+      placeholder="Link Imagen"
+      value="<%= cliente.imgURL %>"
+    />
+    <!-- <div class="upload-file d-flex flex-column mb-3">
       <label
         class="custom-file-label"
         for="inputGroupFile02"
@@ -98,7 +106,7 @@
         class="custom-file-input"
         id="inputGroupFile02"
       />
-    </div>
+    </div> -->
     <button class="btn btn-warning w-100" type="submit">Editar</button>
   </form>
   <hr />
@@ -148,6 +156,7 @@
     const fb = document.querySelector('#fbInput').value;
     const ig = document.querySelector('#igInput').value;
     const web = document.querySelector('#webInput').value;
+    const imgURL = document.querySelector('#imgURLInput').value;
     const id = formEditar.dataset.id;
     try {
       const data = await fetch(`/clientes/${id}`, {
@@ -163,6 +172,7 @@
           fb,
           ig,
           web,
+          imgURL,
         }),
       });
 
