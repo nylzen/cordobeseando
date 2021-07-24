@@ -25,16 +25,26 @@
           <div class="comercio-info">
             <h2 class="title-comercio mb-3"><%= cliente.nombre %></h2>
             <p><%= cliente.direccion %></p>
-            <p>3487-420603</p>
+            <p>3487-15-660793</p>
             <ul class="d-flex rrss-comercio">
               <li>
-                <a href="#"><i class="fas fa-link"></i></a>
+                <a href="<%= cliente.web %>" target="_blank"
+                  ><i class="fas fa-link"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a
+                  href="https://www.facebook.com/<%= cliente.ig %>"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a
+                  href="https://www.facebook.com/<%= cliente.fb %>"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
               </li>
             </ul>
             <hr />
