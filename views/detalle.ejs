@@ -40,6 +40,14 @@
     <input
       type="text"
       class="form-control my-2"
+      name="telefono"
+      id="telefonoInput"
+      placeholder="Telefono del cliente"
+      value="<%= cliente.telefono %>"
+    />
+    <input
+      type="text"
+      class="form-control my-2"
       name="descuento"
       id="descuentoInput"
       placeholder="Descuento"
@@ -126,6 +134,7 @@
     const nombre = document.querySelector('#nombreInput').value;
     const rubro = document.querySelector('#rubroInput').value;
     const direccion = document.querySelector('#direccionInput').value;
+    const telefono = document.querySelector('#telefonoInput').value;
     const descuento = document.querySelector('#descuentoInput').value;
     const fb = document.querySelector('#fbInput').value;
     const ig = document.querySelector('#igInput').value;
@@ -139,6 +148,7 @@
           nombre,
           rubro,
           direccion,
+          telefono,
           descuento,
           fb,
           ig,
