@@ -56,6 +56,14 @@
     <input
       type="text"
       class="form-control my-2"
+      name="dtociruclo"
+      id="dtocirculoInput"
+      placeholder="Descuento en el circulo"
+      value="<%= cliente.descuento %>"
+    />
+    <input
+      type="text"
+      class="form-control my-2"
       name="fb"
       id="fbInput"
       placeholder="Facebook"
@@ -136,6 +144,7 @@
     const direccion = document.querySelector('#direccionInput').value;
     const telefono = document.querySelector('#telefonoInput').value;
     const descuento = document.querySelector('#descuentoInput').value;
+    const dtoCirculo = document.querySelector('#dtocirculoInput').value;
     const fb = document.querySelector('#fbInput').value;
     const ig = document.querySelector('#igInput').value;
     const web = document.querySelector('#webInput').value;
@@ -150,6 +159,7 @@
           direccion,
           telefono,
           descuento,
+          dtoCirculo,
           fb,
           ig,
           web,

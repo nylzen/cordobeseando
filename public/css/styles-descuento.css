@@ -9,7 +9,8 @@
 .publicidad-comercio {
   width: 400px;
   height: 400px;
-  background: url('/img/descuentos/banner-abril.jpg') no-repeat center/cover;
+  background: url('/img/descuentos/banner-damas-artesanas.jpg') no-repeat
+    center/cover;
   border-radius: 15px;
   color: var(--light);
 }
