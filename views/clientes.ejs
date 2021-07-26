@@ -15,7 +15,7 @@
         <th scope="col">Direccion</th>
         <th scope="col">Telefono</th>
         <th scope="col">Descuento</th>
-
+        <th scope="col">Dto Circulo</th>
         <th scope="col">Facebook</th>
         <th scope="col">Instagram</th>
         <th scope="col">Web</th>
@@ -26,19 +26,24 @@
       <% if (arrayClientes.length > 0) { %> <% arrayClientes.forEach(cliente =>{
       %>
       <tr>
-        <td><%= cliente.nombre %></td>
+        <td>
+          <a href="/descuento/<%= cliente.id%>" target="_blank"
+            ><%= cliente.nombre %></a
+          >
+        </td>
         <td><%= cliente.rubro %></td>
         <td><%= cliente.direccion %></td>
         <td><%= cliente.telefono %></td>
         <td><%= cliente.descuento %></td>
+        <td><%= cliente.dtocirculo %></td>
 
         <td>
-          <a href="<%= cliente.fb %>" target="_blank"
+          <a href="https://www.facebook.com/<%= cliente.fb %>" target="_blank"
             ><i class="fab fa-facebook"></i
           ></a>
         </td>
         <td>
-          <a href="<%= cliente.ig %>" target="_blank"
+          <a href="https://www.instagram.com/<%= cliente.ig %>" target="_blank"
             ><i class="fab fa-instagram-square"></i
           ></a>
         </td>

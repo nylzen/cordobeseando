@@ -12,6 +12,7 @@ const clienteSchema = new Schema({
   fb: String,
   ig: String,
   web: String,
+  imgURL: String,
 });
 
 const Cliente = mongoose.model('Cliente', clienteSchema);
