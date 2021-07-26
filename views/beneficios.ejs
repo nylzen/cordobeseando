@@ -20,12 +20,17 @@
 
 <div class="descuentos-container">
   <div class="cards-descuentos mx-auto px-5 mb-5 d-flex flex-wrap">
-    <% arrayClientes.forEach(cliente=> { %>
+    <a href="/categorias/animales" class="card-item box-shadow animales"></a>
+    <a href="/categorias/arte" class="card-item box-shadow arte"></a>
+    <a href="/categorias/automotor" class="card-item box-shadow automotor"></a>
+
+
+    <!-- Mostrar todos los clientes -->
+    <!-- <% arrayClientes.forEach(cliente=> { %>
     <a
       href="/descuento/<%= cliente.id %>"
       class="card-item box-shadow <%= cliente.rubro %>"
     ></a>
-    <% }) %>
-    <a href="/descuento/" class="card-item box-shadow belleza"></a>
+    <% }) %>  -->
   </div>
 </div>
