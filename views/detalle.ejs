@@ -1,5 +1,5 @@
 <%- include("template/cabecera", { tituloWeb: "Detalle Cliente"}) %>
-<div class="container">
+<div class="container my-3">
   <h1 class="mt-3">Detalle cliente</h1>
   <hr />
   <a href="/clientes" class="btn btn-dark mb-3"
@@ -59,7 +59,7 @@
       name="dtociruclo"
       id="dtocirculoInput"
       placeholder="Descuento en el circulo"
-      value="<%= cliente.descuento %>"
+      value="<%= cliente.dtocirculo %>"
     />
     <input
       type="text"
@@ -93,20 +93,7 @@
       placeholder="Link Imagen"
       value="<%= cliente.imgURL %>"
     />
-    <!-- <div class="upload-file d-flex flex-column mb-3">
-      <label
-        class="custom-file-label"
-        for="inputGroupFile02"
-        aria-describedby="inputGroupFileAddon02"
-        >Cargar Banner Descuento</label
-      >
-      <input
-        type="file"
-        name="image"
-        class="custom-file-input"
-        id="inputGroupFile02"
-      />
-    </div> -->
+
     <button class="btn btn-warning w-100" type="submit">Editar</button>
   </form>
   <hr />
@@ -152,12 +139,13 @@
     const direccion = document.querySelector('#direccionInput').value;
     const telefono = document.querySelector('#telefonoInput').value;
     const descuento = document.querySelector('#descuentoInput').value;
-    const dtoCirculo = document.querySelector('#dtocirculoInput').value;
+    const dtocirculo = document.querySelector('#dtocirculoInput').value;
     const fb = document.querySelector('#fbInput').value;
     const ig = document.querySelector('#igInput').value;
     const web = document.querySelector('#webInput').value;
     const imgURL = document.querySelector('#imgURLInput').value;
     const id = formEditar.dataset.id;
+
     try {
       const data = await fetch(`/clientes/${id}`, {
         method: 'put',
@@ -168,7 +156,7 @@
           direccion,
           telefono,
           descuento,
-          dtoCirculo,
+          dtocirculo,
           fb,
           ig,
           web,
