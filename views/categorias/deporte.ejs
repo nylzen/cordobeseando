@@ -1,6 +1,6 @@
-<%- include("../template/cabecera", { tituloWeb: "Arte y Diseño"}) %>
+<%- include("../template/cabecera", { tituloWeb: "Deporte"}) %>
 <%- include ("../template/header-categorias") %>  
-<% arrayClientes.forEach(cliente=> { %> <% if (cliente.rubro === 'arte'){ %>
+<% arrayClientes.forEach(cliente=> { %> <% if (cliente.rubro === 'deporte'){ %>
   <a
     href="/descuento/<%= cliente.id %>"
     class="card-item box-shadow"
