@@ -9,8 +9,6 @@
 .publicidad-comercio {
   width: 400px;
   height: 400px;
-  /*   background: url('/img/descuentos/banner-damas-artesanas.jpg') no-repeat
-    center/cover; */
   border-radius: 15px;
   overflow: hidden;
   color: var(--light);
@@ -66,7 +64,7 @@
 
 /* queries */
 @media screen and (max-width: 767px) {
-  .container-publicidad {
+  .container-publi-info {
     flex-direction: column;
     text-align: center;
     margin: 50px;
