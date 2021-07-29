@@ -96,6 +96,7 @@ body {
 /* .carousel-inner {
   height: 345px;
 } */
+
 /* Section Descuentos */
 .descuentos {
   padding: 20px;
@@ -296,6 +297,23 @@ textarea {
 }
 
 /* Media Queries */
+
+/*1024PX */
+@media screen and (max-width: 1024px) {
+  /* Card Descuentos Destacados */
+  .card-item {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Card Comercios */
+  .card-comercio-item {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+/* 767PX */
 @media screen and (max-width: 767px) {
   /* Navbar */
   .nav-ul {
@@ -389,10 +407,6 @@ textarea {
 }
 
 @media screen and (max-width: 380px) {
-  .card-descuentos {
-    background: red;
-  }
-
   .card-item {
     width: 125px;
     height: 125px;
