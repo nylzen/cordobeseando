@@ -50,16 +50,21 @@
 .p-descuentos {
   text-align: left;
   margin-bottom: 0;
+  max-width: 500px;
 }
 
 .descuentos p {
   font-weight: bold;
-  background: red;
 }
 
 .sale-icon {
   max-width: 100%;
   width: 25px;
+}
+
+.i-direccion,
+.i-telefono {
+  color: var(--primaryColor);
 }
 
 /* queries */
@@ -93,5 +98,10 @@
   .p-descuentos {
     margin: 10px 0;
     text-align: center;
+  }
+
+  .btn-volver {
+    width: 50%;
+    margin: 0 auto;
   }
 }
