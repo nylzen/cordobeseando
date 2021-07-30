@@ -4,7 +4,7 @@
   <div class="d-flex justify-content-center">
     <div class="container-publicidad d-flex justify-content-center">
       <div>
-        <a href="/beneficios" class="btn btn-dark mb-4"
+        <a href="/beneficios" class="btn btn-dark mb-4 btn-volver"
           ><i class="fas fa-angle-left me-2"></i>Volver</a
         >
         <div class="container-publi-info d-flex">
@@ -26,8 +26,14 @@
 
           <div class="comercio-info">
             <h2 class="title-comercio mb-3"><%= cliente.nombre %></h2>
-            <p><%= cliente.direccion %></p>
-            <p><%= cliente.telefono %></p>
+            <p>
+              <i class="fas fa-map-marker-alt i-direccion"></i> <%=
+              cliente.direccion %>
+            </p>
+            <p>
+              <i class="fas fa-phone-alt i-telefono"></i> <%= cliente.telefono
+              %>
+            </p>
             <ul class="d-flex rrss-comercio">
               <li>
                 <a href="<%= cliente.web %>" target="_blank"
@@ -69,7 +75,7 @@
             </div>
             <hr />
             <div class="suscribirse">
-              <p>Unite al club de descuento y disfruta de estos beneficios</p>
+              <p>Unite al club de descuentos y disfruta de estos beneficios</p>
               <a
                 href="https://checkout.rebill.to/clubdescuentos/plan/2377"
                 target="_blank"
