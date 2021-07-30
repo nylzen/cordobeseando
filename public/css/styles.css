@@ -431,6 +431,17 @@ textarea {
     width: 300px;
   }
 
+  /* Quienes Somos PAGINA */
+
+  .team-info {
+    width: 100%;
+  }
+
+  .divider-about {
+    width: 15%;
+    margin: 0 0 20px 0;
+  }
+
   /* Escuchanos */
   .card-radio {
     margin-top: 20px;
