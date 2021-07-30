@@ -50,6 +50,7 @@
 .p-descuentos {
   text-align: left;
   margin-bottom: 0;
+  max-width: 500px;
 }
 
 .descuentos p {
