@@ -8,6 +8,7 @@ const clienteSchema = new Schema({
   direccion: String,
   telefono: String,
   descuento: String,
+  descuento2: String,
   dtocirculo: String,
   fb: String,
   ig: String,
