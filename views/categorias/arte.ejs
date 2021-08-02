@@ -1,9 +1,9 @@
-<%- include("../template/cabecera", { tituloWeb: "Arte y Diseño"}) %>
-<%- include ("../template/header-categorias") %>  
-<% arrayClientes.forEach(cliente=> { %> <% if (cliente.rubro === 'arte'){ %>
-  <a
-    href="/descuento/<%= cliente.id %>"
-    class="card-item box-shadow"
-    style="background:url('<%= cliente.imgURL%>') no-repeat center/cover;"></a>
-  <% } %><% }) %>
-<%- include ('../template/footer-categorias') %> 
+<%- include("../template/cabecera", { tituloWeb: "Arte y Diseño"}) %> <%-
+include ("../template/header-categorias") %> <% arrayClientes.forEach(cliente=>
+{ %> <% if (cliente.rubro === 'arte'){ %>
+<a
+  href="/descuento/<%= cliente.id %>"
+  class="card-item-categoria bg-primary box-shadow"
+  style="background: url('<%= cliente.imgURL%>') no-repeat center/cover"
+></a>
+<% } %><% }) %> <%- include ('../template/footer-categorias') %>
