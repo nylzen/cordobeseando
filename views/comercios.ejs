@@ -28,11 +28,26 @@
 >
   <% arrayClientes.forEach(cliente => { %>
   <!-- <div class="comercio-item box-shadow"></div> -->
-  <a
-    href="/descuento/<%= cliente.id %>"
-    class="card-item-categoria box-shadow"
-    style="background: url('<%= cliente.imgURL%>') no-repeat center/cover"
-  ></a>
+  <div>
+    <p
+      class="
+        dto-badge
+        m-2
+        d-flex
+        text-light
+        justify-content-center
+        align-items-center
+        position-absolute
+      "
+    >
+      <%= cliente.dtocirculo %>
+    </p>
+    <a
+      href="/descuento/<%= cliente.id %>"
+      class="card-item-categoria box-shadow"
+      style="background: url('<%= cliente.imgURL%>') no-repeat center/cover"
+    ></a>
+  </div>
 
   <% }) %>
 </div>

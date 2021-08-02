@@ -1,9 +1,24 @@
 <%- include("../template/cabecera", { tituloWeb: "Automotor"}) %> <%- include
 ("../template/header-categorias") %> <% arrayClientes.forEach(cliente=> { %> <%
 if (cliente.rubro === 'automotor'){ %>
-<a
-  href="/descuento/<%= cliente.id %>"
-  class="card-item-categoria box-shadow"
-  style="background: url('<%= cliente.imgURL%>') no-repeat center/cover"
-></a>
+<div class="d-flex">
+  <p
+    class="
+      dto-badge
+      m-2
+      d-flex
+      text-light
+      justify-content-center
+      align-items-center
+      position-absolute
+    "
+  >
+    <%= cliente.dtocirculo %>
+  </p>
+  <a
+    href="/descuento/<%= cliente.id %>"
+    class="card-item-categoria box-shadow"
+    style="background: url('<%= cliente.imgURL%>') no-repeat center/cover"
+  ></a>
+</div>
 <% } %><% }) %> <%- include ('../template/footer-categorias') %>
