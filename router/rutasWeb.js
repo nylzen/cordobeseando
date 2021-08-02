@@ -16,5 +16,9 @@ router.get('/quienes-somos', (req, res) => {
   res.render('quienes-somos');
 });
 
+// Ruta FAQ
+router.get('/preguntas-frecuentes', (req, res) => {
+  res.render('preguntas-frecuentes');
+});
 
 module.exports = router;
