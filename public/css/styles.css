@@ -134,6 +134,17 @@ body {
   transition: all 0.4s ease;
 }
 
+.card-item-categoria {
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
 .card-item:hover,
 .card-comercio-item:hover {
   transform: scale(1.05);
@@ -398,6 +409,11 @@ textarea {
 
 /* 767PX */
 @media screen and (max-width: 767px) {
+  /* Card Descuentos Destacados */
+  .card-item {
+    width: 150px;
+    height: 150px;
+  }
   /* Navbar */
   .nav-ul {
     display: none;
@@ -499,6 +515,7 @@ textarea {
     font-size: 50px;
   }
 }
+
 /* 381 Fix Form */
 @media screen and (max-width: 381px) {
   input {
@@ -508,11 +525,11 @@ textarea {
 }
 
 @media screen and (max-width: 380px) {
+  /* Card Descuentos Destacados */
   .card-item {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
-
   .form-input {
     width: 100%;
     height: 50px;
@@ -542,14 +559,21 @@ textarea {
     width: 100%;
   }
 }
-/* 320 WIDTH */
-@media screen and (max-width: 380px) {
+
+@media screen and (max-width: 379px) {
   /* Card Descuentos Destacados */
   .card-item {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
   }
-
+}
+/* 320 WIDTH */
+@media screen and (max-width: 320px) {
+  /* Card Descuentos Destacados */
+  .card-item {
+    width: 110px;
+    height: 110px;
+  }
   /* Card Comercios */
   .card-comercio-item {
     width: 100px;
