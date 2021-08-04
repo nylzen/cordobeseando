@@ -98,6 +98,31 @@ body {
   height: 345px;
 } */
 
+.carousel-control-prev,
+.carousel-control-next {
+  height: 80px;
+  width: 50px;
+  margin: auto;
+}
+
+.carousel-control-prev:hover {
+  box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background: var(--light);
+  border-radius: 0 4px 4px 0;
+}
+
+.carousel-control-next:hover {
+  box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background: var(--light);
+  border-radius: 4px 0 0 4px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  opacity: 0.4;
+  filter: invert(90);
+}
+
 /* Section Descuentos */
 .descuentos {
   padding: 20px;
