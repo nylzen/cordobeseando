@@ -1,35 +1,26 @@
-<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <div
-      class="modal__container"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modal-1-title"
-    >
-      <header class="modal__header">
-        <h2 class="modal__title" id="modal-1-title">Micromodal</h2>
-        <button
-          class="modal__close"
-          aria-label="Close modal"
-          data-micromodal-close
-        ></button>
-      </header>
-      <main class="modal__content" id="modal-1-content">
-        <p>
-          Try hitting the <code>tab</code> key and notice how the focus stays
-          within the modal itself. Also, <code>esc</code> to close modal.
-        </p>
-      </main>
-      <footer class="modal__footer">
-        <button class="modal__btn modal__btn-primary">Continue</button>
-        <button
-          class="modal__btn"
-          data-micromodal-close
-          aria-label="Close this dialog window"
-        >
-          Close
-        </button>
-      </footer>
-    </div>
+<button class="btn open" id="open"><i class="fas fa-question"></i></button>
+
+<div class="modal_container box-shadow" id="modal_container">
+  <div class="modal_">
+    <h1>Beneficios Exclusivos 🥳</h1>
+    <hr>
+    <p>Suscribite al club de descuentos y accedé a descuentos exclusivos!</p>
+    <a href="https://checkout.rebill.to/clubdescuentos/plan/2377" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Asociarme</a>
+    <hr>
+    <a href="/preguntas-frecuentes" class="faq-link">Preguntas Frecuentes <i class="fas fa-external-link-alt"></i></a>
   </div>
 </div>
+
+<script>
+  const open = document.getElementById("open");
+  const modal_container = document.getElementById("modal_container");
+  const close = document.getElementById("close");
+
+  open.addEventListener("click",()=>{
+    modal_container.classList.toggle('show')
+  })
+
+  close.addEventListener("click",()=>{
+    modal_container.classList.remove('show')
+  })
+</script>

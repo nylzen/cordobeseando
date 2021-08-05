@@ -396,6 +396,67 @@ textarea {
   align-items: center;
 }
 
+/* ============================================= */
+/* ==================== MODAL=================== */
+/* ============================================= */
+.open {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  background: var(--actionColor);
+  color: var(--light);
+}
+
+.open:active {
+  outline: none;
+}
+
+.open:focus {
+  border: none;
+}
+
+.modal_container {
+  position: fixed;
+  bottom: 95px;
+  right: 30px;
+  width: 350px;
+  max-width: 100%;
+  padding: 20px;
+  background: var(--light);
+  border-radius: 10px;
+  color: var(--dark);
+  z-index: 5;
+  opacity: 0;
+  transition: all 0.1s ease-in;
+  pointer-events: none;
+}
+
+.modal_container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal_container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.modal_container p {
+  opacity: 0.8;
+}
+
+.faq-link {
+  color: var(--dark);
+  opacity: 0.7;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
 /* Media Queries */
 
 /*1024PX */
