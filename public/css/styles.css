@@ -172,7 +172,8 @@ body {
 }
 
 .card-item:hover,
-.card-comercio-item:hover {
+.card-comercio-item:hover,
+.card-item-categoria:hover {
   transform: scale(1.05);
 }
 
