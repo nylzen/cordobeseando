@@ -37,7 +37,6 @@ app.use('/comercios', require('./router/comercios'));
 // CATEGORIAS
 app.use('/categorias/animales', require('./router/categorias/animales'));
 app.use('/categorias/arte', require('./router/categorias/arte'));
-app.use('/categorias/automotor', require('./router/categorias/automotor'));
 app.use('/categorias/bebes', require('./router/categorias/bebes'));
 // ======= //
 app.use('/categorias/belleza', require('./router/categorias/belleza'));

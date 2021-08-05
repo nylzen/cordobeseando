@@ -19,6 +19,7 @@
   border-radius: 50px;
   height: 60px;
   width: 60px;
+  z-index: 3;
 }
 
 .dto-badge p {
