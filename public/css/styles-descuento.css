@@ -65,7 +65,7 @@
 
 .i-direccion,
 .i-telefono {
-  color: var(--primaryColor);
+  color: var(--dark);
 }
 
 /* queries */
