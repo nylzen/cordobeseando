@@ -395,6 +395,36 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+.card-faq {
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card-comercios,
+.card-suscriptores {
+  width:200px;
+  background: var(--actionColor);
+  color: var(--light);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.icon-faq {
+  display: block;
+}
+
+.card-comercios:hover,
+.card-suscriptores:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.card-text {
+  max-width: 250px;
+}
 
 /* ============================================= */
 /* ==================== MODAL=================== */
@@ -455,6 +485,32 @@ textarea {
   opacity: 0.7;
   font-size: 0.85rem;
   text-decoration: none;
+}
+
+/* ============================================= */
+/* ==================== SUBS =================== */
+/* ============================================= */
+
+.header-suscripciones {
+  height: 300px;
+  background: url('https://images.unsplash.com/photo-1496937658648-f529947a47ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')
+    no-repeat center/cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-suscripciones--title {
+  color: var(--light);
+  font-weight: 700;
+}
+
+.container-subs {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-container .link-pago {
+  margin: 0 10px;
 }
 
 /* Media Queries */
