@@ -4,7 +4,7 @@
 <!-- Input Search -->
 <div class="px-5 mt-5 mx-auto">
   <div class="search">
-    <input type="text" class="search-input" placeholder="Buscar..." name="" />
+    <input type="text" class="search-input" placeholder="Buscar..." name="" id="inputBusqueda"/>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
 </div>
 
 <div class="descuentos-container">
-  <div class="cards-descuentos mx-auto mb-5 d-flex flex-wrap">
+  <div class="cards-descuentos mx-auto mb-5 d-flex flex-wrap" id="cardsDescuentos">
     <!--  -->
     <a href="/categorias/animales" class="card-item box-shadow animales"></a>
     <a href="/categorias/arte" class="card-item box-shadow arte"></a>
@@ -33,7 +33,6 @@
       href="/categorias/ferreteria-cerrajeria"
       class="card-item box-shadow ferreteria"
     ></a>
-    <a href="/categorias/heladeria" class="card-item box-shadow heladeria"></a>
     <a href="/categorias/hogar" class="card-item box-shadow hogar"></a>
     <!--  -->
     <a
@@ -59,6 +58,7 @@
       class="card-item box-shadow naturaleza"
     ></a>
     <a href="/categorias/oficios" class="card-item box-shadow oficios"></a>
+    <a href="/categorias/postres" class="card-item box-shadow postres"></a>
     <a
       href="/categorias/profesiones"
       class="card-item box-shadow profesiones"
@@ -98,3 +98,33 @@
 </div>
 
 <script src="../js/script.js"></script>
+<script>
+  let categorias = ['animales','arte','bebes','belleza','caza','comida','deporte','electronica','ferreteria', 'hogar', 'indumentaria', 'inmobiliaria', 'joyas', 'kiosco', 'libreria', 'naturaleza', 'oficios', 'postres','profesiones', 'repuestos', 'rodados', 'salud', 'seguros', 'souvenir', 'supermercado', 'tatuajes', 'traslados', 'videojuegos']
+
+  const inputTextBusqueda = document.getElementById('inputBusqueda');
+
+  inputTextBusqueda.addEventListener("keyup", buscarCategoria);
+
+  function buscarCategoria(e) {
+  e.preventDefault();
+
+  const categoriaABuscar = inputTextBusqueda.value;
+
+  const categoriaFiltradas = categorias.filter((valor) =>
+    valor.toUpperCase().includes(categoriaABuscar.toUpperCase())
+  );
+
+  pintarCategorias(categoriaFiltradas);
+}
+
+function pintarCategorias(array) {
+  cardsDescuentos.innerHTML = `
+  ${array
+    .map(
+      (valor) =>
+        `<a href='/categorias/${valor}' class="card-item box-shadow ${valor}"></a>`
+    )
+    .join("")}
+  `;
+}
+</script>
