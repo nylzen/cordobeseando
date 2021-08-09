@@ -40,7 +40,8 @@ body {
 
 /* Size Cordobeseando logo / Header */
 .logo {
-  width: 280px;
+  width: 200px;
+  padding:10px;
 }
 
 /* Nav Styling */
@@ -199,11 +200,55 @@ body {
   justify-content: center;
 }
 
-.card-comercio-item {
+
+
+/* COMERCIOS DESTACADOS */
+/* Comercio 1 */
+.item-1 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('../img/rubros/belleza.jpg') no-repeat center/cover;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627419593/Automotores-Larrea-banner_fynftm.gif') no-repeat center/cover;
+  transition: all 0.4s ease;
+}
+/* Comercio 2 */
+.item-2 {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627481994/el-mundo-baterias_puhmal.gif') no-repeat center/cover;
+  transition: all 0.4s ease;
+}
+/* Comercio 3 */
+.item-3 {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627571835/gomeria-la-cueva_wejsbi.jpg') no-repeat center/cover;
+  transition: all 0.4s ease;
+}
+/* Comercio 4 */
+.item-4 {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628165010/fletes-san-jorge_je6nza.gif') no-repeat center/cover;
+  transition: all 0.4s ease;
+}
+/* Comercio 5 */
+.item-5 {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627914982/zarate-pintores_uteiwd.jpg') no-repeat center/cover;
+  transition: all 0.4s ease;
+}
+/* Comercio 6 */
+.item-6 {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628026564/veterinaria-zarate_nin89l.jpg') no-repeat center/cover;
   transition: all 0.4s ease;
 }
 
