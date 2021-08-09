@@ -8,7 +8,7 @@ const Cliente = require('../../models/cliente');
 router.get('/', async (req, res) => {
   try {
     const arrayClientesDB = await Cliente.find();
-    res.render('categorias/heladeria', {
+    res.render('categorias/postres', {
       arrayClientes: arrayClientesDB,
     });
   } catch (error) {
@@ -22,12 +22,12 @@ router.get('/', async (req, res) => {
   try {
     const clienteDB = await Cliente.findOne({ rubro: rubro });
 
-    res.render('categorias/heladeria', {
+    res.render('categorias/postres', {
       cliente: clienteDB,
       error: false,
     });
   } catch (error) {
-    res.render('heladeria', {
+    res.render('postres', {
       error: true,
       mensaje: 'No se encontro el ID especificado',
     });

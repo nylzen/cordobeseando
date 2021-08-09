@@ -49,7 +49,7 @@ app.use(
   '/categorias/ferreteria-cerrajeria',
   require('./router/categorias/ferreteria-cerrajeria')
 );
-app.use('/categorias/heladeria', require('./router/categorias/heladeria'));
+app.use('/categorias/postres', require('./router/categorias/postres'));
 app.use('/categorias/hogar', require('./router/categorias/hogar'));
 // ======= //
 app.use(
