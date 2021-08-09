@@ -74,10 +74,7 @@ app.use('/categorias/naturaleza', require('./router/categorias/naturaleza'));
 app.use('/categorias/oficios', require('./router/categorias/oficios'));
 app.use('/categorias/profesiones', require('./router/categorias/profesiones'));
 // ======= //
-app.use(
-  '/categorias/repuestos-accesorios',
-  require('./router/categorias/repuestos-accesorios')
-);
+
 app.use('/categorias/rodados', require('./router/categorias/rodados'));
 app.use('/categorias/salud', require('./router/categorias/salud'));
 app.use('/categorias/seguros', require('./router/categorias/seguros'));

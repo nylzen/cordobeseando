@@ -68,6 +68,6 @@
 .comercio-item {
   width: 250px;
   height: 250px;
-  background: url('../img/rubros/belleza.jpg') no-repeat center/cover;
+  background: url('../img/rubros/') no-repeat center/cover;
   border-radius: 15px;
 }
