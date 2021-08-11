@@ -41,7 +41,7 @@ body {
 /* Size Cordobeseando logo / Header */
 .logo {
   width: 200px;
-  padding:10px;
+  padding: 10px;
 }
 
 /* Nav Styling */
@@ -95,9 +95,13 @@ body {
 }
 
 /* Slider */
-/* .carousel-inner {
-  height: 345px;
-} */
+.img_mobile {
+  display: none;
+}
+
+.img_full {
+  display: block;
+}
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -200,15 +204,14 @@ body {
   justify-content: center;
 }
 
-
-
 /* COMERCIOS DESTACADOS */
 /* Comercio 1 */
 .item-1 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627419593/Automotores-Larrea-banner_fynftm.gif') no-repeat center/cover;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627419593/Automotores-Larrea-banner_fynftm.gif')
+    no-repeat center/cover;
   transition: all 0.4s ease;
 }
 /* Comercio 2 */
@@ -216,7 +219,8 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627481994/el-mundo-baterias_puhmal.gif') no-repeat center/cover;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627481994/el-mundo-baterias_puhmal.gif')
+    no-repeat center/cover;
   transition: all 0.4s ease;
 }
 /* Comercio 3 */
@@ -224,7 +228,8 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627571835/gomeria-la-cueva_wejsbi.jpg') no-repeat center/cover;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627571835/gomeria-la-cueva_wejsbi.jpg')
+    no-repeat center/cover;
   transition: all 0.4s ease;
 }
 /* Comercio 4 */
@@ -232,7 +237,8 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628165010/fletes-san-jorge_je6nza.gif') no-repeat center/cover;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628165010/fletes-san-jorge_je6nza.gif')
+    no-repeat center/cover;
   transition: all 0.4s ease;
 }
 /* Comercio 5 */
@@ -240,7 +246,8 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627914982/zarate-pintores_uteiwd.jpg') no-repeat center/cover;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627914982/zarate-pintores_uteiwd.jpg')
+    no-repeat center/cover;
   transition: all 0.4s ease;
 }
 /* Comercio 6 */
@@ -248,7 +255,8 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628026564/veterinaria-zarate_nin89l.jpg') no-repeat center/cover;
+  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628026564/veterinaria-zarate_nin89l.jpg')
+    no-repeat center/cover;
   transition: all 0.4s ease;
 }
 
@@ -353,9 +361,21 @@ textarea {
 }
 
 .footer {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   color: #f0f9ff;
   background-color: #282d32;
+}
+
+.hecho {
+  margin: 0;
+  background-color: #282d32;
+  color: #fff;
+  padding: 25px 0;
+  font-size: .8rem;
+}
+
+.hecho p{
+  opacity: 0.7;
 }
 
 .footer h3 {
@@ -482,8 +502,10 @@ textarea {
   height: 50px;
   padding: 5px 10px;
   border-radius: 50px;
+
   background: var(--actionColor);
   color: var(--light);
+  z-index: 10;
 }
 
 .open:active {
@@ -563,38 +585,43 @@ textarea {
 /* ============================================= */
 
 .info-container {
-  background:var(--light);
+  background: var(--light);
   border-radius: 10px;
-  width:65%;
+  width: 65%;
   margin: 0 auto;
   padding: 20px 0;
-  text-align:center;
-  justify-content:center;
+  text-align: center;
+  justify-content: center;
   align-items: flex-start;
-  gap: 50px
+  gap: 50px;
 }
 
 .info-container a {
-  text-decoration:none;
-
+  text-decoration: none;
 }
 
-.card-about,.card-how,.card-exp{
+.card-about,
+.card-how,
+.card-exp {
   max-width: 250px;
-  border-radius:10px;
-  padding:20px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.card-about:hover,.card-how:hover,.card-exp:hover{
+.card-about:hover,
+.card-how:hover,
+.card-exp:hover {
   background: #0059ff0c;
 }
 
-.card-about h2,.card-how h2,.card-exp h2{
-  margin-bottom:20px
+.card-about h2,
+.card-how h2,
+.card-exp h2 {
+  margin-bottom: 20px;
 }
 
-.card-about-p{
-  max-width:180px;
+.card-about-p {
+  max-width: 180px;
 }
 
 /* Media Queries */
@@ -637,14 +664,22 @@ textarea {
 
 /* 767PX */
 @media screen and (max-width: 767px) {
-  .tags-container{
+ 
+  .img_full{
+    display: none;
+  }
+
+  .img_mobile{
+    display:block;
+  }
+
+  .tags-container {
     flex-wrap: wrap;
   }
-  .btn-volver{
+  .btn-volver {
     display: block;
     margin: 20px auto;
     width: 90%;
-    
   }
   /* Card Descuentos Destacados */
   .card-item {
