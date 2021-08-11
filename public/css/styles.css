@@ -371,6 +371,11 @@ textarea {
   background-color: #282d32;
   color: #fff;
   padding: 25px 0;
+  font-size: .8rem;
+}
+
+.hecho p{
+  opacity: 0.7;
 }
 
 .footer h3 {
@@ -497,8 +502,10 @@ textarea {
   height: 50px;
   padding: 5px 10px;
   border-radius: 50px;
+
   background: var(--actionColor);
   color: var(--light);
+  z-index: 10;
 }
 
 .open:active {
