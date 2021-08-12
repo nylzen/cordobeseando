@@ -371,10 +371,10 @@ textarea {
   background-color: #282d32;
   color: #fff;
   padding: 25px 0;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.hecho p{
+.hecho p {
   opacity: 0.7;
 }
 
@@ -624,7 +624,13 @@ textarea {
   max-width: 180px;
 }
 
-/* Media Queries */
+
+.btn-volver {
+  width: 10%;
+}
+/* ============================================= */
+/* ================ MEDIA QUERIES ============== */
+/* ============================================= */
 
 /*1024PX */
 @media screen and (max-width: 1024px) {
@@ -632,12 +638,14 @@ textarea {
   .card-item {
     width: 180px;
     height: 180px;
+    margin: 5px;
   }
 
   /* Card Comercios */
   .card-comercio-item {
     width: 125px;
     height: 125px;
+    margin: 5px;
   }
 }
 /* 1000PX Fix Nav */
@@ -664,13 +672,12 @@ textarea {
 
 /* 767PX */
 @media screen and (max-width: 767px) {
- 
-  .img_full{
+  .img_full {
     display: none;
   }
 
-  .img_mobile{
-    display:block;
+  .img_mobile {
+    display: block;
   }
 
   .tags-container {
@@ -786,7 +793,19 @@ textarea {
     padding: 20px;
     font-size: 50px;
   }
+
+  .card-item-categoria {
+    margin: 5px;
+  }
+
+ 
 }
+
+/* 393 pixels  */
+/* @media screen and (max-width: 393px) {
+  .card-item {}
+} */
+
 
 /* 381 Fix Form */
 @media screen and (max-width: 381px) {
