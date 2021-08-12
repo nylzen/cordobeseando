@@ -32,6 +32,7 @@
 
 .title-comercio {
   font-weight: 600;
+  max-width: 500px;
 }
 
 .rrss-comercio {
@@ -70,6 +71,11 @@
 
 /* queries */
 @media screen and (max-width: 767px) {
+  .container-publicidad,
+  .container_general_dto,
+  .container-btn-flex {
+    max-width: 370px;
+  }
   .container-publi-info {
     flex-direction: column;
     text-align: center;
@@ -79,7 +85,7 @@
   .publicidad-comercio {
     width: 250px;
     height: 250px;
-    margin: 0 auto;
+    margin: 0 auto 25px auto;
   }
 
   .rrss-comercio li {
@@ -92,17 +98,21 @@
   }
 
   hr {
-    width: 50vw;
+    width: 70vw;
     margin: 15px auto;
   }
 
   .p-descuentos {
     margin: 10px 0;
     text-align: center;
+    width: 300px;
   }
 
   .btn-volver {
     width: 50%;
     margin: 0 auto;
   }
+}
+
+@media screen and (max-width: 370px) {
 }
