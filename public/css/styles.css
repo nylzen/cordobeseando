@@ -596,33 +596,7 @@ textarea {
   gap: 50px;
 }
 
-.info-container a {
-  text-decoration: none;
-}
 
-.card-about,
-.card-how,
-.card-exp {
-  max-width: 250px;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.card-about:hover,
-.card-how:hover,
-.card-exp:hover {
-  background: #0059ff0c;
-}
-
-.card-about h2,
-.card-how h2,
-.card-exp h2 {
-  margin-bottom: 20px;
-}
-
-.card-about-p {
-  max-width: 180px;
-}
 
 
 .btn-volver {
