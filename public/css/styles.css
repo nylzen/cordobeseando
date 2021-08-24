@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -17,7 +17,7 @@
   --light: #fff;
   --dark: #474747;
   /* Font */
-  --fontFamily: 'Poppins', sans-serif;
+  --fontFamily: "Poppins", sans-serif;
 }
 
 .container-fluid {
@@ -210,7 +210,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627419593/Automotores-Larrea-banner_fynftm.gif')
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627419593/Automotores-Larrea-banner_fynftm.gif")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
@@ -219,7 +219,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627481994/el-mundo-baterias_puhmal.gif')
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627481994/el-mundo-baterias_puhmal.gif")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
@@ -228,7 +228,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627571835/gomeria-la-cueva_wejsbi.jpg')
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627571835/gomeria-la-cueva_wejsbi.jpg")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
@@ -237,7 +237,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628165010/fletes-san-jorge_je6nza.gif')
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1628165010/fletes-san-jorge_je6nza.gif")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
@@ -246,7 +246,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1627914982/zarate-pintores_uteiwd.jpg')
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627914982/zarate-pintores_uteiwd.jpg")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
@@ -255,7 +255,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628026564/veterinaria-zarate_nin89l.jpg')
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1628026564/veterinaria-zarate_nin89l.jpg")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
@@ -279,7 +279,7 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 15px;
-  background: url('https://images.unsplash.com/photo-1593697821094-53ed19153f21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')
+  background: url("https://images.unsplash.com/photo-1593697821094-53ed19153f21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")
     no-repeat center/cover;
 }
 
@@ -294,7 +294,7 @@ body {
 /* Escuchanos */
 .escuchanos {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80')
+    url("https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80")
       no-repeat center/cover;
   padding: 40px;
   color: var(--light);
@@ -412,7 +412,7 @@ textarea {
 /* ============================================= */
 .header-about {
   height: 300px;
-  background: url('https://images.unsplash.com/photo-1531156992292-d36397ee9184?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')
+  background: url("https://images.unsplash.com/photo-1531156992292-d36397ee9184?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
     no-repeat center/cover;
   justify-content: center;
   align-items: center;
@@ -435,7 +435,7 @@ textarea {
 }
 
 .img-about {
-  background: url('https://www.yaconic.com/wp-content/uploads/2016/08/simpsonENTRADAF-1024x452.jpg')
+  background: url("https://www.yaconic.com/wp-content/uploads/2016/08/simpsonENTRADAF-1024x452.jpg")
     no-repeat center/cover;
   height: 100px;
   width: 100px;
@@ -454,7 +454,7 @@ textarea {
 /* ==================== FAQ ==================== */
 /* ============================================= */
 .header-faq {
-  background: url('https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80')
+  background: url("https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80")
     no-repeat center/cover;
   height: 345px;
   justify-content: center;
@@ -560,7 +560,7 @@ textarea {
 
 .header-suscripciones {
   height: 300px;
-  background: url('https://res.cloudinary.com/cordobeseando/image/upload/v1628598200/1ilyuza-mingazova-HaTIYO87qWQ-unsplash_x41rmm.jpg')
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1628598200/1ilyuza-mingazova-HaTIYO87qWQ-unsplash_x41rmm.jpg")
     no-repeat center/cover;
   justify-content: center;
   align-items: center;
@@ -596,12 +596,39 @@ textarea {
   gap: 50px;
 }
 
-
-
-
 .btn-volver {
   width: 10%;
 }
+
+/* ============================================= */
+/* ============= OBTENER BENEFICIOS ============ */
+/* ============================================= */
+.info-beneficios {
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card-obtener-beneficios {
+  border-radius: 15px;
+}
+
+.obtener-item {
+  padding: 20px;
+  width: 300px;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+.obtener-item p {
+  margin: 0;
+}
+.icons-beneficios {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--actionColor);
+}
+
 /* ============================================= */
 /* ================ MEDIA QUERIES ============== */
 /* ============================================= */
@@ -772,14 +799,20 @@ textarea {
     margin: 5px;
   }
 
- 
+  .card-obtener-beneficios {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .obtener-item {
+    margin-bottom: 20px;
+  }
 }
 
 /* 393 pixels  */
 /* @media screen and (max-width: 393px) {
   .card-item {}
 } */
-
 
 /* 381 Fix Form */
 @media screen and (max-width: 381px) {
