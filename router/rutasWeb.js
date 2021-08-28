@@ -35,4 +35,9 @@ router.get("/preguntas-frecuentes-suscriptores", (req, res) => {
 router.get("/obtener-beneficios", (req, res) => {
   res.render("obtener-beneficios");
 });
+
+// Ruta Radio
+router.get("/radio", (req, res) => {
+  res.render("radio");
+});
 module.exports = router;

@@ -738,6 +738,7 @@ textarea {
   .quienes-texto {
     margin-top: 40px;
   }
+
   .quienes-p {
     width: 300px;
   }
@@ -760,6 +761,7 @@ textarea {
 
   .escuchanos-info {
     text-align: center;
+    margin-top: 25px;
   }
 
   /* Contacto */
