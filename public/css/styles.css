@@ -304,13 +304,14 @@ body {
 .card-radio {
   width: 200px;
   height: 200px;
-  background: #c4c4c4;
+  background: url("https://images.unsplash.com/photo-1618001200181-e341f7949194?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80")
+    no-repeat center/cover;
   border-radius: 15px;
   color: var(--actionColor);
 }
 
-.card-radio i {
-  font-size: 2rem;
+.title-escuchanos {
+  font-size: 1.5rem;
 }
 
 .google-play {
@@ -318,6 +319,18 @@ body {
   width: 150px;
 }
 
+.a-link {
+  padding: 13px 15px;
+  background: black;
+  border: 1.9px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration-line: none;
+}
+
+.a-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
 /* SECTION CONTACT */
 .contact-item {
   padding: 20px;

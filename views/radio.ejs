@@ -1,5 +1,58 @@
 <%- include("template/cabecera", { tituloWeb: "Descuento"}) %>
+<div class="container">
+  <div class="text-radio">
+    <h2 class="title mt-5">¡Miranos en vivo!</h2>
+    <p class="text-center mt-4">
+      Seguí nuestras trasmisiones los días Sábados de 17 a 20hs
+    </p>
+    <p class="text-center mb-4">
+      Escuchanos las 24hs haciendo
+      <a href="#radio-player"
+        >click aca <i class="fas fa-external-link-alt"></i
+      ></a>
+    </p>
+  </div>
+  <div
+    class="mb-5"
+    style="
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+    "
+  >
+    <iframe
+      width="560"
+      height="300"
+      src="https://videostream.shockmedia.com.ar:2000/VideoPlayer/cordobeseando"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      "
+      scrolling="no"
+      frameborder="0"
+      allow="autoplay"
+      allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+      oallowfullscreen
+      msallowfullscreen
+    ></iframe>
+  </div>
+  <div class="radio-player mx-auto" id="radio-player">
+    <h2 class="title my-5">¡Escuchanos las 24hs!</h2>
+    <audio autoplay controls="controls" class="mb-5 mx-auto w-100">
+      <source
+        src="http://streaming.radiosenlinea.com.ar:9294/;"
+        type="audio/ogg"
+      />
+    </audio>
+  </div>
+</div>
 
-<audio autoplay controls="controls">
-  <source src="http://streaming.radiosenlinea.com.ar:8824;" type="audio/ogg" />
-</audio>
+<%- include("template/footer") %>

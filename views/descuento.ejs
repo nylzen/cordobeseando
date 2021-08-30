@@ -1,10 +1,12 @@
 <%- include("template/cabecera", { tituloWeb: "Descuento"}) %>
 
-<div class="container-fluid container_general_dto  ">
+<div class="container-fluid container_general_dto">
   <div class="d-flex justify-content-center">
-    <div class="container-publicidad d-flex justify-content-center w-100 ">
+    <div class="container-publicidad d-flex justify-content-center w-100">
       <div class="container-btn-flex">
-        <a href="javascript: history.go(-1)" class="btn btn-dark mb-4 btn-volver"
+        <a
+          href="javascript: history.go(-1)"
+          class="btn btn-dark mb-4 btn-volver"
           ><i class="fas fa-angle-left me-2"></i>Volver</a
         >
         <div class="container-publi-info d-flex">
@@ -21,7 +23,11 @@
             >
               <%= cliente.dtocirculo %>
             </p>
-            <img src="<%= cliente.imgURL %>" alt="publicidad comercio" class='img-publicidad w-100' />
+            <img
+              src="<%= cliente.imgURL %>"
+              alt="publicidad comercio"
+              class="img-publicidad w-100"
+            />
           </div>
 
           <div class="comercio-info">
@@ -75,10 +81,11 @@
             </div>
             <hr />
             <div class="suscribirse">
-              <p>Accedé a este y todos los descuentos de los comercios adheridos</p>
-              <a
-                href="/suscripciones"
-                class="btn btn-primary"
+              <p>
+                Accedé a este y a mas de los 70 descuentos de los comercios
+                adheridos
+              </p>
+              <a href="/suscripciones" class="btn btn-primary"
                 >Suscribite | $180 por mes</a
               >
             </div>
