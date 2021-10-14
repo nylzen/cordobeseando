@@ -205,7 +205,7 @@ body {
 }
 
 /* COMERCIOS DESTACADOS */
-/* Comercio 1 */
+/* Comercio 1 LARREA */
 .item-1 {
   width: 180px;
   height: 180px;
@@ -214,7 +214,7 @@ body {
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 2 */
+/* Comercio 2 MUNDO BATE*/
 .item-2 {
   width: 180px;
   height: 180px;
@@ -223,39 +223,39 @@ body {
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 3 */
+/* Comercio 3 ASOREY*/
 .item-3 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627571835/gomeria-la-cueva_wejsbi.jpg")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627998190/asorey_lcyvyi.jpg")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 4 */
+/* Comercio 4 PROMO FIESTA*/
 .item-4 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1628165010/fletes-san-jorge_je6nza.gif")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627503796/promo-fiesta_n4jaak.gif")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 5 */
+/* Comercio 5 NAKAMA */
 .item-5 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627914982/zarate-pintores_uteiwd.jpg")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627507899/nakama-sushi_jlpsc4.gif")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 6 */
+/* Comercio 6 vinas xpress */
 .item-6 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1628026564/veterinaria-zarate_nin89l.jpg")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627939227/vi%C3%B1as_rlwm3m.jpg")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
