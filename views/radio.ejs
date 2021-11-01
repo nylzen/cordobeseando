@@ -1,4 +1,5 @@
 <%- include("template/cabecera", { tituloWeb: "Descuento"}) %>
+<link rel="stylesheet" href="../css/twitch-styles.css" />
 <div class="container">
   <div class="text-radio">
     <h2 class="title mt-5">¡Miranos en vivo!</h2>
@@ -12,7 +13,33 @@
       ></a>
     </p>
   </div>
-  <div
+
+  <div class="twitch">
+    <div class="twitch-video">
+      <iframe
+        src="https://player.twitch.tv/?channel=cordobeseando&parent=www.cordobeseando.com.ar&autoplay=false"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+        height="480"
+        width="854"
+      >
+      </iframe>
+    </div>
+    <!-- <div class="twitch-chat">
+      <iframe
+        frameborder="0"
+        scrolling="no"
+        src="https://www.twitch.tv/embed/phil_nash/chat?parent=philna.sh"
+        height="100%"
+        width="100%"
+      >
+      </iframe>
+    </div> -->
+  </div>
+
+  <!-- Embed link stream -->
+  <!-- <div
     class="mb-5"
     style="
       position: relative;
@@ -52,7 +79,7 @@
         type="audio/ogg"
       />
     </audio>
-  </div>
+  </div> -->
 </div>
 
 <%- include("template/footer") %>
