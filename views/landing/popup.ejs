@@ -1,0 +1,40 @@
+<div class="popup-box show-modal" id="popup-hide">
+  <div class="popup-content">
+    <button class="button-close btn" id="close-button">x</button>
+    <div class="popup-body d-flex align-items-center">
+      <div class="img-popup">
+        <img
+          src="https://res.cloudinary.com/cordobeseando/image/upload/v1635799327/carnet-club-web_chs8l6.gif"
+          alt=""
+        />
+      </div>
+      <div class="popup-text">
+        <h1 class="popup-title">¡Sumate gratis al club de descuentos!</h1>
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSehVJYLltzkxLT9vBIvE5wjH_jJwViV-kHWAeKWqMaT7ex6kg/viewform"
+          target="_blank"
+          class="btn btn-primary mt-2"
+          >¡Pedi tu carnet!</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const popup = document.querySelector(".popup-box");
+  const closeButton = document.getElementById("close-button");
+
+  window.addEventListener("load", function () {
+    // showPopUp();
+    setTimeout(function () {
+      popup.classList.add("show-modal");
+    }, 5000);
+  });
+
+  closeButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    popup.classList.toggle("show-modal");
+  });
+</script>
