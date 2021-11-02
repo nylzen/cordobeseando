@@ -1,76 +1,50 @@
 <%- include("template/cabecera", { tituloWeb: "Descuento"}) %>
-<link rel="stylesheet" href="../css/twitch-styles.css" />
+<!-- <link rel="stylesheet" href="../css/twitch-styles.css" /> -->
 <div class="container">
   <div class="text-radio">
     <h2 class="title mt-5">¡Miranos en vivo!</h2>
     <p class="text-center mt-4">
-      Seguí nuestras trasmisiones los días Sábados de 17 a 20hs
+      Seguí nuestras trasmisiones los días Sábados de 17 a 20hs y los dias Miercoles a partir de las 19hs!
     </p>
   </div>
 
-  <div class="container-twitch">
-    <div id="twitch-embed"></div>
-  </div>
+  <style>
+    /* .hide { display:none; } */
 
-  <!-- Load the Twitch embed JavaScript file -->
-  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    /* Optional: The following css just makes sure the twitch video stays responsive */
+    #twitch-embed {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+      margin: 20px 0 40px 0;
+    }
+    #twitch-embed object, #twitch-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+</head>
 
-  <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+<body>
+
+  
+  <div id="twitch-embed"></div>
+  <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+
   <script type="text/javascript">
     new Twitch.Embed("twitch-embed", {
-      width: 854,
-      height: 480,
-      channel: "cordobeseando",
-      // Only needed if this page is going to be embedded on other websites
-      parent: [
-        "embed.example.com",
-        "othersite.example.com",
-        "cordobeseando.com.ar",
-      ],
-    });
+        width: 854,
+        height: 480,
+        channel: "cordobeseando",
+        layout: "video"
+      })
+    
   </script>
-  <!-- Embed link stream -->
-  <!-- <div
-    class="mb-5"
-    style="
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      padding-top: 56.25%;
-    "
-  >
-    <iframe
-      width="560"
-      height="300"
-      src="https://videostream.shockmedia.com.ar:2000/VideoPlayer/cordobeseando"
-      style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-      "
-      scrolling="no"
-      frameborder="0"
-      allow="autoplay"
-      allowfullscreen
-      webkitallowfullscreen
-      mozallowfullscreen
-      oallowfullscreen
-      msallowfullscreen
-    ></iframe>
-  </div>
-  <div class="radio-player mx-auto" id="radio-player">
-    <h2 class="title my-5">¡Escuchanos las 24hs!</h2>
-    <audio autoplay controls="controls" class="mb-5 mx-auto w-100">
-      <source
-        src="http://streaming.radiosenlinea.com.ar:9294/;"
-        type="audio/ogg"
-      />
-    </audio>
-  </div> -->
+
 </div>
 
 <%- include("template/footer") %>
