@@ -10,12 +10,15 @@
 
 <div class="tags-container mt-5 d-flex justify-content-center">
   <span class="p-2 tag-item active">Zárate</span>
-  <span class="p-2 tag-item">Campana (proximamente)</span>
+  <a href="/ciudad/campana" class="p-2 tag-item">Campana (proximamente)</a>
   <span class="p-2 tag-item">Escobar (proximamente)</span>
 </div>
 
 <div class="descuentos-container">
-  <div class="cards-descuentos mx-auto mb-5 d-flex flex-wrap" id="cardsDescuentos">
+  <div
+    class="cards-descuentos mx-auto mb-5 d-flex flex-wrap"
+    id="cardsDescuentos"
+  >
     <!--  -->
     <a href="/categorias/animales" class="card-item box-shadow animales"></a>
     <a href="/categorias/arte" class="card-item box-shadow arte"></a>
@@ -96,26 +99,54 @@
 
 <script src="../js/script.js"></script>
 <script>
-  let categorias = ['animales','arte','bebes','belleza','caza','comida','deporte','electronica','ferreteria', 'hogar', 'indumentaria', 'inmobiliaria', 'joyas', 'kiosco', 'libreria', 'naturaleza', 'oficios', 'postres','profesiones', 'rodados', 'salud', 'seguros', 'souvenir', 'supermercado', 'tatuajes', 'traslados', 'videojuegos']
+  let categorias = [
+    "animales",
+    "arte",
+    "bebes",
+    "belleza",
+    "caza",
+    "comida",
+    "deporte",
+    "electronica",
+    "ferreteria",
+    "hogar",
+    "indumentaria",
+    "inmobiliaria",
+    "joyas",
+    "kiosco",
+    "libreria",
+    "naturaleza",
+    "oficios",
+    "postres",
+    "profesiones",
+    "rodados",
+    "salud",
+    "seguros",
+    "souvenir",
+    "supermercado",
+    "tatuajes",
+    "traslados",
+    "videojuegos",
+  ];
 
-  const inputTextBusqueda = document.getElementById('inputBusqueda');
+  const inputTextBusqueda = document.getElementById("inputBusqueda");
 
   inputTextBusqueda.addEventListener("keyup", buscarCategoria);
 
   function buscarCategoria(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  const categoriaABuscar = inputTextBusqueda.value;
+    const categoriaABuscar = inputTextBusqueda.value;
 
-  const categoriaFiltradas = categorias.filter((valor) =>
-    valor.toUpperCase().includes(categoriaABuscar.toUpperCase())
-  );
+    const categoriaFiltradas = categorias.filter((valor) =>
+      valor.toUpperCase().includes(categoriaABuscar.toUpperCase())
+    );
 
-  pintarCategorias(categoriaFiltradas);
-}
+    pintarCategorias(categoriaFiltradas);
+  }
 
-function pintarCategorias(array) {
-  cardsDescuentos.innerHTML = `
+  function pintarCategorias(array) {
+    cardsDescuentos.innerHTML = `
   ${array
     .map(
       (valor) =>
@@ -123,5 +154,5 @@ function pintarCategorias(array) {
     )
     .join("")}
   `;
-}
+  }
 </script>

@@ -28,14 +28,28 @@
   const closeButton = document.getElementById("close-button");
 
   window.addEventListener("load", function () {
-    // showPopUp();
     setTimeout(function () {
       popup.classList.add("show-modal");
     }, 5000);
   });
 
+  // Function closeModal
+  function modalClose() {
+    if (popup) {
+      popup.classList.remove("show-modal");
+    }
+  }
+
+  // Handle Esc key
+  document.addEventListener("keyup", function (e) {
+    if (e.keyCode == 27) {
+      modalClose();
+    }
+  });
+
+  // Handle Click Button
   closeButton.addEventListener("click", function (e) {
     e.preventDefault();
-    popup.classList.toggle("show-modal");
+    modalClose();
   });
 </script>

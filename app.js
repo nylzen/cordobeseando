@@ -8,9 +8,9 @@ app.use(express.json());
 env = require("dotenv").config();
 
 // Conexion a base de datos
-const user = "nel";
-const pw = "1pJ66SCSiq7jWXtB";
-const dbname = "cordobeseando";
+const user = process.env.USER;
+const pw = process.env.PASSWORD;
+const dbname = process.env.DBNAME;
 const mongoose = require("mongoose");
 const uri = `mongodb+srv://${user}:${pw}@cluster0.y1fki.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
@@ -33,6 +33,9 @@ app.use("/descuento", require("./router/descuento"));
 app.use("/beneficios", require("./router/beneficios"));
 app.use("/comercios", require("./router/comercios"));
 
+// CIUDADES
+app.use("/ciudad/zarate", require("./router/ciudades/zarate"));
+app.use("/ciudad/campana", require("./router/ciudades/campana"));
 // CATEGORIAS
 app.use("/categorias/animales", require("./router/categorias/animales"));
 app.use("/categorias/arte", require("./router/categorias/arte"));
@@ -73,7 +76,6 @@ app.use("/categorias/naturaleza", require("./router/categorias/naturaleza"));
 app.use("/categorias/oficios", require("./router/categorias/oficios"));
 app.use("/categorias/profesiones", require("./router/categorias/profesiones"));
 // ======= //
-
 app.use("/categorias/rodados", require("./router/categorias/rodados"));
 app.use("/categorias/salud", require("./router/categorias/salud"));
 app.use("/categorias/seguros", require("./router/categorias/seguros"));

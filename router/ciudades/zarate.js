@@ -8,7 +8,7 @@ const Cliente = require("../../models/cliente");
 router.get("/", async (req, res) => {
   try {
     const arrayClientesDB = await Cliente.find();
-    res.render("categorias/animales", {
+    res.render("ciudades/zarate", {
       arrayClientes: arrayClientesDB,
     });
   } catch (error) {
@@ -18,16 +18,16 @@ router.get("/", async (req, res) => {
 
 //
 router.get("/", async (req, res) => {
-  const rubro = req.params.rubro;
+  const ciudad = req.params.ciudad;
   try {
-    const clienteDB = await Cliente.findOne({ rubro: rubro });
+    const clienteDB = await Cliente.findOne({ ciudad });
 
-    res.render("categorias/animales", {
+    res.render("ciudad/zarate", {
       cliente: clienteDB,
       error: false,
     });
   } catch (error) {
-    res.render("animales", {
+    res.render("zarate", {
       error: true,
       mensaje: "No se encontro el ID especificado",
     });

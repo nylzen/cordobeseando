@@ -1,32 +1,32 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // requerimiento del modelo Cliente para conectarse a la DB
-const Cliente = require('../models/cliente');
+const Cliente = require("../models/cliente");
 
 // Ver un unico cliente
-router.get('/:id', async (req, res) => {
-  const id = req.params.id;
+router.get("/:slug", async (req, res) => {
+  const slug = req.params.slug;
   try {
-    const clienteDB = await Cliente.findOne({ _id: id });
+    const clienteDB = await Cliente.findOne({ slug });
 
-    res.render('descuento', {
+    res.render("descuento", {
       cliente: clienteDB,
       error: false,
     });
   } catch (error) {
-    res.render('descuento', {
+    res.render("descuento", {
       error: true,
-      mensaje: 'No se encontro el ID especificado',
+      mensaje: "No se encontro el ID especificado",
     });
   }
 });
 
 // Imprimir todos los datos de la DB en la tabla
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const arrayClientesDB = await Cliente.find();
-    res.render('descuento', {
+    res.render("descuento", {
       arrayClientes: arrayClientesDB,
     });
   } catch (error) {

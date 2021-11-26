@@ -6,13 +6,37 @@
     ><i class="fas fa-angle-left me-2"></i>Volver</a
   >
   <form action="/clientes" method="POST" class="d-flex flex-column">
+    <label for="nombre" class="fw-bold">Nombre:</label>
     <input
       type="text"
       name="nombre"
       placeholder="Nombre"
       class="form-group my-2"
+      id="nombreInput"
     />
-    <select name="rubro" id="rubroInput" placeholder="Rubro/Categoria">
+    <label for="slug" class="fw-bold d-none"
+      >Slug (Se autocompleta solo):</label
+    >
+    <input
+      type="text"
+      name="slug"
+      placeholder="slug"
+      class="form-group my-2 d-none"
+      id="slug"
+    />
+    <label for="ciudad" class="fw-bold">Ciudad:</label>
+    <select name="ciudad" id="ciudadInput">
+      <option value="zarate">Zarate</option>
+      <option value="campana">Campana</option>
+    </select>
+    <!--  -->
+    <label for="rubro" class="fw-bold mt-2">Rubro:</label>
+    <select
+      name="rubro"
+      id="rubroInput"
+      placeholder="Rubro/Categoria"
+      class="mt-2"
+    >
       <option value="animales">Animales y Mascotas</option>
       <option value="arte">Arte y Diseño</option>
       <option value="bebes">Bebes y Niños</option>
@@ -48,24 +72,28 @@
       <option value="traslados">Traslados</option>
       <option value="videojuegos">Videojuegos</option>
     </select>
+    <label for="direccion" class="fw-bold mt-2">Direccion:</label>
     <input
       type="text"
       name="direccion"
       placeholder="Direccion"
       class="form-group my-2"
     />
+    <label for="telefono" class="fw-bold">Telefono:</label>
     <input
       type="text"
       name="telefono"
       placeholder="Telefono"
       class="form-group my-2"
     />
+    <label for="descuento" class="fw-bold">Descuento:</label>
     <input
       type="text"
       name="descuento"
       placeholder="Descuento"
       class="form-group my-2"
     />
+    <label for="descuento2" class="fw-bold">Descuento 2:</label>
     <input
       type="text"
       name="descuento2"
@@ -73,25 +101,29 @@
       class="form-group my-2"
     />
 
+    <label for="dtocirculo" class="fw-bold">Descuento Circulo:</label>
     <input
       type="text"
       name="dtocirculo"
       placeholder="Descuento en el Circulo"
       class="form-group my-2"
     />
+    <label for="fb" class="fw-bold">Facebook (Despues de la /):</label>
     <input
       type="text"
       name="fb"
       placeholder="Facebook"
       class="form-group my-2"
     />
+    <label for="ig" class="fw-bold">Instagram (Despues de la /):</label>
     <input
       type="text"
       name="ig"
       placeholder="Instagram"
       class="form-group my-2"
     />
-    <input type="text" name="web" placeholder="Web" class="form-group my-2" />
+    <!-- <input type="text" name="web" placeholder="Web" class="form-group my-2" /> -->
+    <label for="imgURL" class="fw-bold">Link Imagen:</label>
     <input
       type="text"
       name="imgURL"
@@ -102,3 +134,14 @@
     <button class="btn btn-success" type="submit">Crear</button>
   </form>
 </div>
+
+<script>
+  // Funcion para crear slug automaticamente
+  const nameValue = document.querySelector("#nombreInput");
+
+  nameValue.addEventListener("keyup", () => {
+    let inputSlug = document.querySelector("#slug");
+    const slug = nameValue.value.toLowerCase().replace(/\s/g, "-");
+    inputSlug.value = slug;
+  });
+</script>

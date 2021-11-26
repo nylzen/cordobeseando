@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Esquema de la base de datos
@@ -12,10 +12,12 @@ const clienteSchema = new Schema({
   dtocirculo: String,
   fb: String,
   ig: String,
-  web: String,
+  // web: String,
   imgURL: String,
+  slug: String,
+  ciudad: String,
 });
 
-const Cliente = mongoose.model('Cliente', clienteSchema);
+const Cliente = mongoose.model("Cliente", clienteSchema);
 
 module.exports = Cliente;

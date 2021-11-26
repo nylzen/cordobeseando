@@ -16,7 +16,7 @@ include ("../template/header-categorias") %> <% arrayClientes.forEach(cliente=>
     <%= cliente.dtocirculo %>
   </p>
   <a
-    href="/descuento/<%= cliente.id %>"
+    href="/descuento/<%= cliente.slug %>"
     class="card-item-categoria box-shadow"
     style="background: url('<%= cliente.imgURL%>') no-repeat center/cover"
   ></a>
