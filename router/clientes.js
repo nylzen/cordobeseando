@@ -94,10 +94,10 @@ router.put("/:id", async (req, res) => {
 });
 
 // Ver un unico cliente para DESCUENTO
-router.get("/:id", async (req, res) => {
-  const id = req.params.id;
+router.get("/:slug", async (req, res) => {
+  const slug = req.params.slug;
   try {
-    const clienteDB = await Cliente.findOne({ _id: id });
+    const clienteDB = await Cliente.findOne({ slug });
 
     res.render("descuento", {
       cliente: clienteDB,
