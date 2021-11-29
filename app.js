@@ -8,9 +8,9 @@ app.use(express.json());
 env = require("dotenv").config();
 
 // Conexion a base de datos
-const user = nel;
-const pw = 1pJ66SCSiq7jWXtB;
-const dbname = cordobeseando;
+const user = "nel";
+const pw = "1pJ66SCSiq7jWXtB";
+const dbname = "cordobeseando";
 const mongoose = require("mongoose");
 const uri = `mongodb+srv://${user}:${pw}@cluster0.y1fki.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
