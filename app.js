@@ -36,62 +36,224 @@ app.use("/comercios", require("./router/comercios"));
 // CIUDADES
 app.use("/ciudad/zarate", require("./router/ciudades/zarate"));
 app.use("/ciudad/campana", require("./router/ciudades/campana"));
+
 // CATEGORIAS
-app.use("/categorias/animales", require("./router/categorias/animales"));
-app.use("/categorias/arte", require("./router/categorias/arte"));
-app.use("/categorias/bebes", require("./router/categorias/bebes"));
-// ======= //
-app.use("/categorias/belleza", require("./router/categorias/belleza"));
-app.use("/categorias/caza-pesca", require("./router/categorias/caza-pesca"));
-app.use("/categorias/comida", require("./router/categorias/comida"));
-app.use("/categorias/deporte", require("./router/categorias/deporte"));
-// ======= //
-app.use("/categorias/electronica", require("./router/categorias/electronica"));
+// Zarate
 app.use(
-  "/categorias/ferreteria-cerrajeria",
-  require("./router/categorias/ferreteria-cerrajeria")
+  "/categorias/zarate/animales",
+  require("./router/categorias/zarate/animales")
 );
-app.use("/categorias/postres", require("./router/categorias/postres"));
-app.use("/categorias/hogar", require("./router/categorias/hogar"));
-// ======= //
+app.use("/categorias/zarate/arte", require("./router/categorias/zarate/arte"));
 app.use(
-  "/categorias/indumentaria",
-  require("./router/categorias/indumentaria")
+  "/categorias/zarate/bebes",
+  require("./router/categorias/zarate/bebes")
 );
 app.use(
-  "/categorias/inmobiliaria",
-  require("./router/categorias/inmobiliaria")
+  "/categorias/zarate/belleza",
+  require("./router/categorias/zarate/belleza")
 );
 app.use(
-  "/categorias/joyas-accesorios",
-  require("./router/categorias/joyas-accesorios")
+  "/categorias/zarate/caza-pesca",
+  require("./router/categorias/zarate/caza-pesca")
 );
 app.use(
-  "/categorias/kiosco-golosinas",
-  require("./router/categorias/kiosco-golosinas")
-);
-// ======= //
-app.use("/categorias/librerias", require("./router/categorias/librerias"));
-app.use("/categorias/naturaleza", require("./router/categorias/naturaleza"));
-app.use("/categorias/oficios", require("./router/categorias/oficios"));
-app.use("/categorias/profesiones", require("./router/categorias/profesiones"));
-// ======= //
-app.use("/categorias/rodados", require("./router/categorias/rodados"));
-app.use("/categorias/salud", require("./router/categorias/salud"));
-app.use("/categorias/seguros", require("./router/categorias/seguros"));
-// ======= //
-app.use(
-  "/categorias/souvenir-cotillon",
-  require("./router/categorias/souvenir-cotillon")
+  "/categorias/zarate/comida",
+  require("./router/categorias/zarate/comida")
 );
 app.use(
-  "/categorias/supermercado",
-  require("./router/categorias/supermercado")
+  "/categorias/zarate/deporte",
+  require("./router/categorias/zarate/deporte")
 );
-app.use("/categorias/tatuajes", require("./router/categorias/tatuajes"));
-app.use("/categorias/traslados", require("./router/categorias/traslados"));
-// ======= //
-app.use("/categorias/videojuegos", require("./router/categorias/videojuegos"));
+app.use(
+  "/categorias/zarate/electronica",
+  require("./router/categorias/zarate/electronica")
+);
+app.use(
+  "/categorias/zarate/ferreteria-cerrajeria",
+  require("./router/categorias/zarate/ferreteria-cerrajeria")
+);
+app.use(
+  "/categorias/zarate/postres",
+  require("./router/categorias/zarate/postres")
+);
+app.use(
+  "/categorias/zarate/hogar",
+  require("./router/categorias/zarate/hogar")
+);
+app.use(
+  "/categorias/zarate/indumentaria",
+  require("./router/categorias/zarate/indumentaria")
+);
+app.use(
+  "/categorias/zarate/inmobiliaria",
+  require("./router/categorias/zarate/inmobiliaria")
+);
+app.use(
+  "/categorias/zarate/joyas-accesorios",
+  require("./router/categorias/zarate/joyas-accesorios")
+);
+app.use(
+  "/categorias/zarate/kiosco-golosinas",
+  require("./router/categorias/zarate/kiosco-golosinas")
+);
+app.use(
+  "/categorias/zarate/librerias",
+  require("./router/categorias/zarate/librerias")
+);
+app.use(
+  "/categorias/zarate/naturaleza",
+  require("./router/categorias/zarate/naturaleza")
+);
+app.use(
+  "/categorias/zarate/oficios",
+  require("./router/categorias/zarate/oficios")
+);
+app.use(
+  "/categorias/zarate/profesiones",
+  require("./router/categorias/zarate/profesiones")
+);
+app.use(
+  "/categorias/zarate/rodados",
+  require("./router/categorias/zarate/rodados")
+);
+app.use(
+  "/categorias/zarate/salud",
+  require("./router/categorias/zarate/salud")
+);
+app.use(
+  "/categorias/zarate/seguros",
+  require("./router/categorias/zarate/seguros")
+);
+app.use(
+  "/categorias/zarate/souvenir-cotillon",
+  require("./router/categorias/zarate/souvenir-cotillon")
+);
+app.use(
+  "/categorias/zarate/supermercado",
+  require("./router/categorias/zarate/supermercado")
+);
+app.use(
+  "/categorias/zarate/tatuajes",
+  require("./router/categorias/zarate/tatuajes")
+);
+app.use(
+  "/categorias/zarate/traslados",
+  require("./router/categorias/zarate/traslados")
+);
+app.use(
+  "/categorias/zarate/videojuegos",
+  require("./router/categorias/zarate/videojuegos")
+);
+
+// Campana
+app.use(
+  "/categorias/campana/animales",
+  require("./router/categorias/campana/animales")
+);
+app.use(
+  "/categorias/campana/arte",
+  require("./router/categorias/campana/arte")
+);
+app.use(
+  "/categorias/campana/bebes",
+  require("./router/categorias/campana/bebes")
+);
+app.use(
+  "/categorias/campana/belleza",
+  require("./router/categorias/campana/belleza")
+);
+app.use(
+  "/categorias/campana/caza-pesca",
+  require("./router/categorias/campana/caza-pesca")
+);
+app.use(
+  "/categorias/campana/comida",
+  require("./router/categorias/campana/comida")
+);
+app.use(
+  "/categorias/campana/deporte",
+  require("./router/categorias/campana/deporte")
+);
+app.use(
+  "/categorias/campana/electronica",
+  require("./router/categorias/campana/electronica")
+);
+app.use(
+  "/categorias/campana/ferreteria-cerrajeria",
+  require("./router/categorias/campana/ferreteria-cerrajeria")
+);
+app.use(
+  "/categorias/campana/postres",
+  require("./router/categorias/campana/postres")
+);
+app.use(
+  "/categorias/campana/hogar",
+  require("./router/categorias/campana/hogar")
+);
+app.use(
+  "/categorias/campana/indumentaria",
+  require("./router/categorias/campana/indumentaria")
+);
+app.use(
+  "/categorias/campana/inmobiliaria",
+  require("./router/categorias/campana/inmobiliaria")
+);
+app.use(
+  "/categorias/campana/joyas-accesorios",
+  require("./router/categorias/campana/joyas-accesorios")
+);
+app.use(
+  "/categorias/campana/kiosco-golosinas",
+  require("./router/categorias/campana/kiosco-golosinas")
+);
+app.use(
+  "/categorias/campana/librerias",
+  require("./router/categorias/campana/librerias")
+);
+app.use(
+  "/categorias/campana/naturaleza",
+  require("./router/categorias/campana/naturaleza")
+);
+app.use(
+  "/categorias/campana/oficios",
+  require("./router/categorias/campana/oficios")
+);
+app.use(
+  "/categorias/campana/profesiones",
+  require("./router/categorias/campana/profesiones")
+);
+app.use(
+  "/categorias/campana/rodados",
+  require("./router/categorias/campana/rodados")
+);
+app.use(
+  "/categorias/campana/salud",
+  require("./router/categorias/campana/salud")
+);
+app.use(
+  "/categorias/campana/seguros",
+  require("./router/categorias/campana/seguros")
+);
+app.use(
+  "/categorias/campana/souvenir-cotillon",
+  require("./router/categorias/campana/souvenir-cotillon")
+);
+app.use(
+  "/categorias/campana/supermercado",
+  require("./router/categorias/campana/supermercado")
+);
+app.use(
+  "/categorias/campana/tatuajes",
+  require("./router/categorias/campana/tatuajes")
+);
+app.use(
+  "/categorias/campana/traslados",
+  require("./router/categorias/campana/traslados")
+);
+app.use(
+  "/categorias/campana/videojuegos",
+  require("./router/categorias/campana/videojuegos")
+);
 
 //Configuracion 404
 app.use((req, res, next) => {
