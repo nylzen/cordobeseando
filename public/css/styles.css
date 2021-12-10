@@ -205,57 +205,57 @@ body {
 }
 
 /* COMERCIOS DESTACADOS */
-/* Comercio 1 */
+/* Comercio 1 LARREA */
 .item-1 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627419593/Automotores-Larrea-banner_fynftm.gif")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1635971853/img-comprimidas/Automotores-Larrea-banner_fynftm_x1psz7.webp")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 2 */
+/* Comercio 2 MUNDO BATE*/
 .item-2 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627481994/el-mundo-baterias_puhmal.gif")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1635971854/img-comprimidas/el-mundo-baterias_puhmal_pcgj8i.webp")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 3 */
+/* Comercio 3 ASOREY*/
 .item-3 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627571835/gomeria-la-cueva_wejsbi.jpg")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1635971853/img-comprimidas/asorey_lcyvyi_mlav1u.webp")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 4 */
+/* Comercio 4 PROMO FIESTA*/
 .item-4 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1628165010/fletes-san-jorge_je6nza.gif")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1635971853/img-comprimidas/promo-fiesta_n4jaak_gwaju2.webp")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 5 */
+/* Comercio 5 NAKAMA */
 .item-5 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627914982/zarate-pintores_uteiwd.jpg")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1635971855/img-comprimidas/nakama-sushi_jlpsc4_ubfmlb.webp")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
-/* Comercio 6 */
+/* Comercio 6 nestor rigoni */
 .item-6 {
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1628026564/veterinaria-zarate_nin89l.jpg")
+  background: url("https://res.cloudinary.com/cordobeseando/image/upload/v1627141854/banner-rigoni_o6raua.jpg")
     no-repeat center/cover;
   transition: all 0.4s ease;
 }
@@ -610,7 +610,7 @@ textarea {
 }
 
 .btn-volver {
-  width: 10%;
+  width: 150px;
 }
 
 /* ============================================= */
@@ -642,6 +642,71 @@ textarea {
   color: var(--actionColor);
 }
 
+/* ============================================= */
+/* ==================== POPUP =================== */
+/* ============================================= */
+.popup-box {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: 50px;
+  transition: all 1s ease;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  /* padding: 1rem 1.5rem; */
+  border-radius: 4px;
+}
+
+.button-close {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin: 10px 20px;
+  padding: 15px;
+}
+
+.button-close:hover {
+  background: #282d32;
+  color: #f0f9ff;
+}
+.img-popup {
+  max-width: 300px;
+  width: 100%;
+  margin-right: 20px;
+}
+.img-popup img {
+  width: 100%;
+}
+.popup-title {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.show-modal {
+  opacity: 1;
+  margin-bottom: 0;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 12;
+  transition: all 0.3s ease;
+}
 /* ============================================= */
 /* ================ MEDIA QUERIES ============== */
 /* ============================================= */
@@ -686,6 +751,7 @@ textarea {
 
 /* 767PX */
 @media screen and (max-width: 767px) {
+  /* query para slider*/
   .img_full {
     display: none;
   }
@@ -822,12 +888,28 @@ textarea {
   .obtener-item {
     margin-bottom: 20px;
   }
-}
 
-/* 393 pixels  */
-/* @media screen and (max-width: 393px) {
-  .card-item {}
-} */
+  /* Query PopUp */
+
+  .popup-body {
+    flex-direction: column;
+  }
+
+  .button-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 30px;
+    height: 10px;
+    font-size: 1.3rem;
+  }
+
+  .popup-content {
+    padding: 1rem 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 
 /* 381 Fix Form */
 @media screen and (max-width: 381px) {

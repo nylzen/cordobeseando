@@ -13,6 +13,7 @@
   <!-- Si no hay error imprimi esto -->
   <% if (!error) { %>
   <form id="formEditar" data-id="<%= cliente.id %> ">
+    <label for="nombre" class="fw-bold">Nombre:</label>
     <input
       type="text"
       class="form-control my-2"
@@ -21,6 +22,25 @@
       placeholder="Nombre del Cliente"
       value="<%= cliente.nombre %>"
     />
+    <label for="slug" class="fw-bold">Slug (se completa solo)</label>
+    <input
+      type="text"
+      class="form-control my-2"
+      name="slug"
+      id="slug"
+      placeholder="Slug"
+      value="<%= cliente.slug %>"
+    />
+    <label for="ciudad" class="fw-bold">Ciudad</label>
+    <input
+      type="text"
+      class="form-control my-2"
+      name="ciudad"
+      id="ciudadInput"
+      placeholder="Ciudad"
+      value="<%= cliente.ciudad %>"
+    />
+    <label for="rubro" class="fw-bold">Rubro</label>
     <input
       type="text"
       class="form-control my-2"
@@ -29,6 +49,7 @@
       placeholder="Rubro/Categoria"
       value="<%= cliente.rubro %>"
     />
+    <label for="direccion" class="fw-bold">Dirreccion:</label>
     <input
       type="text"
       class="form-control my-2"
@@ -37,6 +58,7 @@
       placeholder="Direccion del cliente"
       value="<%= cliente.direccion %>"
     />
+    <label for="telefono" class="fw-bold">Telefono:</label>
     <input
       type="text"
       class="form-control my-2"
@@ -45,6 +67,7 @@
       placeholder="Telefono del cliente"
       value="<%= cliente.telefono %>"
     />
+    <label for="descuento" class="fw-bold">Descuento:</label>
     <input
       type="text"
       class="form-control my-2"
@@ -53,6 +76,7 @@
       placeholder="Descuento"
       value="<%= cliente.descuento %>"
     />
+    <label for="descuento2" class="fw-bold">Descuento 2:</label>
     <input
       type="text"
       class="form-control my-2"
@@ -61,6 +85,7 @@
       placeholder="Descuento"
       value="<%= cliente.descuento2 %>"
     />
+    <label for="dtocirculo" class="fw-bold">Descuento Circulo:</label>
     <input
       type="text"
       class="form-control my-2"
@@ -69,6 +94,7 @@
       placeholder="Descuento en el circulo"
       value="<%= cliente.dtocirculo %>"
     />
+    <label for="fb" class="fw-bold">Facebook (Despues de la /):</label>
     <input
       type="text"
       class="form-control my-2"
@@ -77,6 +103,7 @@
       placeholder="Facebook"
       value="<%= cliente.fb %>"
     />
+    <label for="ig" class="fw-bold">Instagram (Despues de la /):</label>
     <input
       type="text"
       class="form-control my-2"
@@ -85,14 +112,15 @@
       placeholder="Instagram"
       value="<%= cliente.ig %>"
     />
-    <input
+    <!-- <input
       type="text"
       class="form-control my-2"
       name="web"
       id="webInput"
       placeholder="Web"
       value="<%= cliente.web %>"
-    />
+    /> -->
+    <label for="imgURL" class="fw-bold">Link Imagen :</label>
     <input
       type="text"
       class="form-control my-2"
@@ -118,18 +146,28 @@
 </div>
 
 <script>
-  const btnEliminar = document.querySelector('#btnEliminar');
-  btnEliminar.addEventListener('click', async () => {
+  // Funcion para crear slug automaticamente
+  const nameValue = document.querySelector("#nombreInput");
+
+  nameValue.addEventListener("keyup", () => {
+    let inputSlug = document.querySelector("#slug");
+    const slugForm = nameValue.value.toLowerCase().replace(/\s/g, "-");
+    inputSlug.value = slugForm;
+  });
+
+  // Boton Eliminar
+  const btnEliminar = document.querySelector("#btnEliminar");
+  btnEliminar.addEventListener("click", async () => {
     const id = btnEliminar.dataset.id;
 
     try {
       const data = await fetch(`/clientes/${id}`, {
-        method: 'delete',
+        method: "delete",
       });
       const res = await data.json();
 
       if (res.estado) {
-        window.location.href = '/clientes';
+        window.location.href = "/clientes";
       } else {
       }
     } catch (error) {
@@ -137,28 +175,30 @@
     }
   });
 
-  const formEditar = document.querySelector('#formEditar');
+  const formEditar = document.querySelector("#formEditar");
 
-  formEditar.addEventListener('submit', async (e) => {
+  formEditar.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const nombre = document.querySelector('#nombreInput').value;
-    const rubro = document.querySelector('#rubroInput').value;
-    const direccion = document.querySelector('#direccionInput').value;
-    const telefono = document.querySelector('#telefonoInput').value;
-    const descuento = document.querySelector('#descuentoInput').value;
-    const descuento2 = document.querySelector('#descuentoInput2').value;
-    const dtocirculo = document.querySelector('#dtocirculoInput').value;
-    const fb = document.querySelector('#fbInput').value;
-    const ig = document.querySelector('#igInput').value;
-    const web = document.querySelector('#webInput').value;
-    const imgURL = document.querySelector('#imgURLInput').value;
+    const nombre = document.querySelector("#nombreInput").value;
+    const rubro = document.querySelector("#rubroInput").value;
+    const direccion = document.querySelector("#direccionInput").value;
+    const telefono = document.querySelector("#telefonoInput").value;
+    const descuento = document.querySelector("#descuentoInput").value;
+    const descuento2 = document.querySelector("#descuentoInput2").value;
+    const dtocirculo = document.querySelector("#dtocirculoInput").value;
+    const fb = document.querySelector("#fbInput").value;
+    const ig = document.querySelector("#igInput").value;
+    // const web = document.querySelector("#webInput").value;
+    const imgURL = document.querySelector("#imgURLInput").value;
+    const ciudad = document.querySelector("#ciudadInput").value;
+    const slug = document.querySelector("#slug").value;
     const id = formEditar.dataset.id;
 
     try {
       const data = await fetch(`/clientes/${id}`, {
-        method: 'put',
-        headers: { 'Content-Type': 'application/json' },
+        method: "put",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           nombre,
           rubro,
@@ -169,19 +209,20 @@
           dtocirculo,
           fb,
           ig,
-          web,
           imgURL,
+          ciudad,
+          slug,
         }),
       });
 
       const res = await data.json();
       if (res.estado) {
-        window.location.href = '/clientes';
+        window.location.href = "/clientes";
       } else {
-        alert('Hubo un error al editar, por favor intenta nuevamente');
+        alert("Hubo un error al editar, por favor intenta nuevamente");
       }
     } catch (error) {
-      console.loc(error);
+      console.log(error);
     }
   });
 </script>

@@ -1,14 +1,14 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // requerimiento el modelo Cliente para conectarse a la DB
-const Cliente = require('../models/cliente');
+const Cliente = require("../models/cliente");
 
 // Imprimir todos los datos de la DB en la tabla
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const arrayClientesDB = await Cliente.find();
-    res.render('clientes', {
+    res.render("clientes", {
       arrayClientes: arrayClientesDB,
     });
   } catch (error) {
@@ -17,40 +17,40 @@ router.get('/', async (req, res) => {
 });
 
 // Creacion de la interfaz crear
-router.get('/crear', (req, res) => {
-  res.render('crear');
+router.get("/crear", (req, res) => {
+  res.render("crear");
 });
 
 // Crear un nuevo cliente
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   const body = req.body;
   try {
     await Cliente.create(body);
-    res.redirect('/clientes');
+    res.redirect("/clientes");
   } catch (error) {}
   //console.log(error);
 });
 
 // Ver un unico cliente
-router.get('/:id', async (req, res) => {
+router.get("/:id", async (req, res) => {
   const id = req.params.id;
   try {
     const clienteDB = await Cliente.findOne({ _id: id });
 
-    res.render('detalle', {
+    res.render("detalle", {
       cliente: clienteDB,
       error: false,
     });
   } catch (error) {
-    res.render('detalle', {
+    res.render("detalle", {
       error: true,
-      mensaje: 'No se encontro el ID especificado',
+      mensaje: "No se encontro el ID especificado",
     });
   }
 });
 
 // Eliminar un cliente de la DB
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const id = req.params.id;
   try {
     const clienteDB = await Cliente.findByIdAndDelete({ _id: id });
@@ -58,12 +58,12 @@ router.delete('/:id', async (req, res) => {
     if (clienteDB) {
       res.json({
         estado: true,
-        mensaje: 'eliminado',
+        mensaje: "eliminado",
       });
     } else {
       res.json({
         estado: false,
-        mensaje: 'No se pudo eliminar',
+        mensaje: "No se pudo eliminar",
       });
     }
   } catch (error) {
@@ -71,7 +71,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put("/:id", async (req, res) => {
   const id = req.params.id;
   const body = req.body;
   try {
@@ -82,31 +82,31 @@ router.put('/:id', async (req, res) => {
 
     res.json({
       estado: true,
-      mensaje: 'editado',
+      mensaje: "editado",
     });
   } catch (error) {
     console.log(error);
     res.json({
       estado: false,
-      mensaje: 'Fallo al editar',
+      mensaje: "Fallo al editar",
     });
   }
 });
 
 // Ver un unico cliente para DESCUENTO
-router.get('/:id', async (req, res) => {
-  const id = req.params.id;
+router.get("/:slug", async (req, res) => {
+  const slug = req.params.slug;
   try {
-    const clienteDB = await Cliente.findOne({ _id: id });
+    const clienteDB = await Cliente.findOne({ slug });
 
-    res.render('descuento', {
+    res.render("descuento", {
       cliente: clienteDB,
       error: false,
     });
   } catch (error) {
-    res.render('descuento', {
+    res.render("descuento", {
       error: true,
-      mensaje: 'No se encontro el ID especificado',
+      mensaje: "No se encontro el ID especificado",
     });
   }
 });

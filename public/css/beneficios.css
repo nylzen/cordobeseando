@@ -1,0 +1,22 @@
+@import "styles.css";
+
+.card-item.zarate,
+.card-item.campana {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* Zarate */
+
+.card-item.zarate {
+  background: url("https://i.pinimg.com/originals/ff/b1/b4/ffb1b411e5e25aee2f1d91e668b0d850.jpg")
+    no-repeat center/cover;
+}
+
+/* Campana */
+
+.card-item.campana {
+  background: url("https://mapio.net/images-p/22220875.jpg") no-repeat
+    center/cover;
+}

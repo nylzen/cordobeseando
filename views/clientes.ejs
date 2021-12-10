@@ -12,32 +12,34 @@
         <!-- <th scope="col">#ID</th> -->
         <th scope="col">Nombre</th>
         <th scope="col">Rubro</th>
+        <th scope="col">Ciudad</th>
         <th scope="col">Direccion</th>
         <th scope="col">Telefono</th>
         <th scope="col">Descuento</th>
-        <th scope="col">Dto Circulo</th>
-        <th scope="col">Facebook</th>
-        <th scope="col">Instagram</th>
-        <th scope="col">Web</th>
+        <!-- <th scope="col">Dto Circulo</th> -->
+        <!-- <th scope="col">Facebook</th>
+        <th scope="col">Instagram</th> -->
+        <!-- <th scope="col">Web</th> -->
         <th scope="col">Accion</th>
       </tr>
     </thead>
     <tbody>
-      <% if (arrayClientes.length > 0) { %> <% arrayClientes.forEach(cliente =>{
+      <% if (arrayClientes.length > 0) { %> <% arrayClientes.forEach(cliente=>{
       %>
       <tr>
         <td>
-          <a href="/descuento/<%= cliente.id%>" target="_blank"
+          <a href="/descuento/<%= cliente.slug%>" target="_blank"
             ><%= cliente.nombre %></a
           >
         </td>
         <td><%= cliente.rubro %></td>
+        <td><%= cliente.ciudad %></td>
         <td><%= cliente.direccion %></td>
         <td><%= cliente.telefono %></td>
         <td><%= cliente.descuento %></td>
-        <td><%= cliente.dtocirculo %></td>
+        <!-- <td><%= cliente.dtocirculo %></td> -->
 
-        <td>
+        <!-- <td>
           <a href="https://www.facebook.com/<%= cliente.fb %>" target="_blank"
             ><i class="fab fa-facebook"></i
           ></a>
@@ -46,18 +48,19 @@
           <a href="https://www.instagram.com/<%= cliente.ig %>" target="_blank"
             ><i class="fab fa-instagram-square"></i
           ></a>
-        </td>
-        <td>
+        </td> -->
+        <!-- <td>
           <a href="<%= cliente.web %>" target="_blank"
             ><i class="fas fa-link"></i
           ></a>
-        </td>
+        </td> -->
         <td>
           <a href="clientes/<%=cliente.id%>" class="btn btn-warning mx-auto"
             ><i class="fas fa-edit me-2"></i
           ></a>
         </td>
       </tr>
+
       <% }) %> <% } %>
     </tbody>
   </table>

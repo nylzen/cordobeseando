@@ -1,0 +1,55 @@
+<div class="popup-box" id="popup-hide">
+  <div class="popup-content">
+    <button class="button-close btn" id="close-button">x</button>
+    <div class="popup-body d-flex align-items-center">
+      <div class="img-popup">
+        <img
+          src="https://res.cloudinary.com/cordobeseando/image/upload/v1635971853/img-comprimidas/carnet-club-web_chs8l6_goe8c8.webp"
+          alt=""
+        />
+      </div>
+      <div class="popup-text">
+        <h1 class="popup-title">¡Sumate gratis al club de descuentos!</h1>
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSehVJYLltzkxLT9vBIvE5wjH_jJwViV-kHWAeKWqMaT7ex6kg/viewform"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary mt-2"
+          >¡Pedi tu carnet!</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const popup = document.querySelector(".popup-box");
+  const closeButton = document.getElementById("close-button");
+
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      popup.classList.add("show-modal");
+    }, 5000);
+  });
+
+  // Function closeModal
+  function modalClose() {
+    if (popup) {
+      popup.classList.remove("show-modal");
+    }
+  }
+
+  // Handle Esc key
+  document.addEventListener("keyup", function (e) {
+    if (e.keyCode == 27) {
+      modalClose();
+    }
+  });
+
+  // Handle Click Button
+  closeButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalClose();
+  });
+</script>
